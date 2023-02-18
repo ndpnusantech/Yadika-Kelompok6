@@ -9,7 +9,7 @@ const HeroSection = () => {
     backgroundImage: `url(${wallpaperGelombang})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    backgroundSize: "100%",
+    backgroundSize: "cover",
   };
 
   return (

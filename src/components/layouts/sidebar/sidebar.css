@@ -1,0 +1,102 @@
+.nav {
+  position: absolute;
+  width: 14%;
+  height: 100%;
+  left: -2px;
+  top: 0px;
+
+  background: #094067;
+  color: #ffffff;
+}
+.me-auto,
+.you-auto {
+  display: block;
+}
+
+.me-auto {
+  position: absolute;
+  width: 131px;
+  height: 35px;
+  top: 292px;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  font-size: 23px;
+  line-height: 34px;
+
+  /* identical to box height */
+}
+
+.you-auto {
+  position: absolute;
+  width: 84px;
+  height: 35px;
+  left: 69px;
+  top: 600px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 34px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.Profile-admin {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 45px;
+  top: 45px;
+
+  background: #ffffff;
+  border-radius: 100%;
+}
+
+.menu {
+  color: #ffffff;
+  width: 200px;
+  transition: all 0.3s;
+}
+
+#active {
+  color: black;
+  background-color: #ffffff;
+  width: 200px;
+  border-radius: 40px 0 0 10px;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+
+.bgprof p {
+  position: absolute;
+  width: 200px;
+  height: 38px;
+  left: 18px;
+  top: 194px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.bgprof {
+  position: absolute;
+  width: 100%;
+  height: 247px;
+  left: -2px;
+  top: 0px;
+
+  background: #00528c;
+  border-radius: 0px 0px 20px 20px;
+}
