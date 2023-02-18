@@ -1,11 +1,11 @@
 import NavigationBar from "../../layouts/navbar/navigationBar";
-
+import HeroSection from "../../user components/heroSection/hero-section";
+import './style.css'
 const Home = () => {
   return (
     <div className="home">
-      <nav>
-        <NavigationBar />
-      </nav>
+      <NavigationBar />
+      <HeroSection />
     </div>
   );
 };
