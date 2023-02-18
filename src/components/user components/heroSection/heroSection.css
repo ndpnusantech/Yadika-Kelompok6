@@ -1,0 +1,30 @@
+.hero-section {
+  height: 87.1vh;
+}
+.hero-section .title {
+  padding-top: 60px;
+  width: 450px;
+}
+
+.hero-section h5 {
+  border-left: 2px solid black;
+  padding-left: 10px;
+}
+.hero-section h1 {
+  font-weight: 600;
+}
+
+.hero-section .btn {
+  background-color: #3da9fc;
+  color: #fff;
+  font-weight: 600;
+  width: 140px;
+  padding: 7px;
+}
+
+.hero-section .logo {
+  margin-top: 50px;
+}
+.hero-section .logo img {
+  padding-top: 50px !important;
+}
