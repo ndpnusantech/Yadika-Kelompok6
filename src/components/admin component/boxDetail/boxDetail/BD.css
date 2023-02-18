@@ -1,0 +1,123 @@
+.main-box{
+position: absolute;
+width: 1155px;
+height: 729px;
+left: 320px;
+top: 31px;
+
+background: #FFFFFF;
+box-shadow: 7px 4px 27px rgba(0, 0, 0, 0.75);
+border-radius: 20px;
+}
+
+.title{
+position: relative;
+width: 1155px;
+height: 88px;
+
+background: #094067;
+border-radius: 20px 20px 0px 0px;
+}
+
+.title p{
+    position: absolute;
+width: 199px;
+height: 53px;
+top: 15px;
+left: 20px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: bold;
+font-size: 35px;
+line-height: 52px;
+
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+}
+
+.produk{
+    position: absolute;
+width: 216px;
+height: 126px;
+left: 34px;
+top: 146px;
+background: #BA8C48;
+border-radius: 10px;
+
+
+}
+
+.expired{
+    position: absolute;
+width: 216px;
+height: 126px;
+left: 321px;
+top: 146px;
+
+background: #D05B5B;
+border-radius: 10px;
+}
+.user{
+    position: absolute;
+width: 216px;
+height: 126px;
+left: 608px;
+top: 146px;
+
+background: #56A2D9;
+border-radius: 10px;
+}
+
+.income{
+    position: absolute;
+width: 216px;
+height: 126px;
+left: 895px;
+top: 146px;
+
+background: #458427;
+border-radius: 10px;
+}
+
+.chart{
+ 
+position: absolute;
+width: 650px;
+height: 400px;
+left: -150px;
+top: 309px;
+
+
+
+}
+
+.Balok{
+    position: absolute;
+width: 736px;
+height: 346px;
+left: 375px;
+top: 351px;
+}
+
+.card p{
+display: block;
+text-align: center;
+margin: 10px 30px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 900;
+font-size: 25px;
+
+/* identical to box height */
+
+color: #FFFFFF;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card{
+    margin-top: -100px;
+}
