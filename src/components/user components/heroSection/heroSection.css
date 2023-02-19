@@ -1,6 +1,8 @@
 .hero-section {
   height: 87.1vh;
+  width: 100%;
 }
+
 .hero-section .title {
   padding-top: -50px;
   width: 450px;

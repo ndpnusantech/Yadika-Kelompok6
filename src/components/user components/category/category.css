@@ -27,6 +27,9 @@
   width: max-content;
 }
 
+.category {
+  margin-bottom: 120px;
+}
 .category h3 {
   color: #094067;
   font-weight: 600;

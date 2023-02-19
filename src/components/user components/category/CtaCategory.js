@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 const CtaCategory = (props) => {
   return (
     <div className="CTA-Category">
-      <a href="">
+      <Link to="">
         <img src={props.image} alt="" /> <p>{props.name}</p>
-      </a>
+      </Link>
     </div>
   );
 };

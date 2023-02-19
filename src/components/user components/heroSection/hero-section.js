@@ -7,8 +7,6 @@ const HeroSection = () => {
 
   const wallpaper = {
     backgroundImage: `url(${wallpaperGelombang})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
     backgroundSize: "cover",
   };
 
