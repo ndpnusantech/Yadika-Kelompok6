@@ -1,0 +1,36 @@
+.CTA-Category {
+  width: 104px;
+}
+
+.CTA-Category a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #094067;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.CTA-Category a:hover {
+  color: black;
+  transition: 0.4s;
+}
+
+.CTA-Category img {
+  width: 100px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 17px;
+}
+
+.CTA-Category p {
+  width: max-content;
+}
+
+.category {
+  margin-bottom: 120px;
+}
+.category h3 {
+  color: #094067;
+  font-weight: 600;
+}
