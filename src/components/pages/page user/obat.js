@@ -1,9 +1,12 @@
+import NavigationBar from "../../layouts/navbar/navigationBar";
+import Category from "../../user components/category/category";
+
 const Obat = () => {
   return (
     <div className="obat">
-      <h1>Ini Halaman obat - Sedang dalam pembuatan</h1>
+      <NavigationBar />
+      <Category />
     </div>
-    // Simpan disini footer nya. contoh : <Footer />
   );
 };
 
