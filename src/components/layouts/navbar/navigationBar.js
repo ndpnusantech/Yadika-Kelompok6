@@ -1,4 +1,5 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./navigationBar.css";
 
 const NavigationBar = () => {
@@ -17,11 +18,21 @@ const NavigationBar = () => {
           <img src={logo} alt="logo healtify" style={styleImage} /> Healtify
         </Navbar.Brand>
         <Nav className="ms-auto">
-          <Nav.Link href="/home">Home</Nav.Link>
-          <Nav.Link href="/obat">Obat</Nav.Link>
-          <Nav.Link href="/riwayat">Riwayat</Nav.Link>
-          <Nav.Link href="/pesananSaya">Pesanan Saya</Nav.Link>
-          <Nav.Link href="/contact">Contact</Nav.Link>
+          <Link to="/home" className="nav-link">
+            Home
+          </Link>
+          <Link to="/obat" className="nav-link">
+            Obat
+          </Link>
+          <Link to="/obat" className="nav-link">
+            Riwayat
+          </Link>
+          <Link to="/obat" className="nav-link">
+            Pesanan Saya
+          </Link>
+          <Link to="/obat" className="nav-link">
+            Contact
+          </Link>
         </Nav>
         <div className="profileUser">
           <a href="/profileUser">
