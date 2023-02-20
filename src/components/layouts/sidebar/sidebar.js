@@ -8,15 +8,9 @@ import React, { useState } from 'react';
 
 
 function CollapsibleExample() {
-<<<<<<< HEAD
-  const profile = "/assets/Profile User/person-circle 1.svg";
-  const [activeLink, setActiveLink] = useState(null);
- 
-=======
     const profile = "/assets/Profile User/person-circle 1.svg";
 
     const [activeLink, setActiveLink] = useState(null);
->>>>>>> 8e07f489a515674ad798531d36f12b85328703e5
 
 
 

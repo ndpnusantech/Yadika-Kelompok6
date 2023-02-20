@@ -10,7 +10,7 @@
   border-radius: 20px;
 }
 
-.title{
+.main-box .title{
 position: relative;
 width: 1155px;
 height: 88px;
@@ -19,7 +19,7 @@ height: 88px;
   border-radius: 20px 20px 0px 0px;
 }
 
-.title p{
+.main-box .title p{
     position: absolute;
 width: 199px;
 height: 53px;

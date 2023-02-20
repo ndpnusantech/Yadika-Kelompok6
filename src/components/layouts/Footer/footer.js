@@ -1,7 +1,7 @@
 import "./footer.css";
 
 const Footer = () => {
-    const logo = "/assets/logo/Lgo.svg";
+    const logo = "/assets/logo/logo2.svg";
     const ig = "/assets/Icon Sosial Media/Instagram.png";
     const twt = "/assets/Icon Sosial Media/twitter.png";
 
