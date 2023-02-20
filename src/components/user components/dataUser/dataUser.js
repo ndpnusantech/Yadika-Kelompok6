@@ -1,9 +1,11 @@
 import React from "react"
 import Table from 'react-bootstrap/Table';
+import "./dataUser.css"
 
-function tableUser() {
+function TableUser() {
   return (
     <div className="tabel">
+    <h3 className="mb-5">Data Users</h3>
     <Table striped bordered hover>
       <thead>
         <tr>
@@ -30,4 +32,4 @@ function tableUser() {
   );
 }
 
-export default tableUser;
+export default TableUser;
