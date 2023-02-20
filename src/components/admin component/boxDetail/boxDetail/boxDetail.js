@@ -1,6 +1,5 @@
 import "./BD.css";
-import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 
@@ -9,7 +8,7 @@ const data = [
   { name: 'product', value: 200 },
   { name: 'expired', value: 100 },
   { name: 'user', value: 425 },
-  { name: 'income', value: 1000 },
+  { name: 'income', value: 1000 }
  
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -77,7 +76,7 @@ const charto = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) 
 const BoxDetail = () => {
     return(
         <div className="main-box">
-    <div className="title"><p>Dashboard</p></div>
+    <div className="judul"><p>Dashboard</p></div>
 <div className="card">
     <div className="produk">
         <p>Produk</p>

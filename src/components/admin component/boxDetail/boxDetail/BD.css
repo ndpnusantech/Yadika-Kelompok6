@@ -10,7 +10,7 @@ box-shadow: 7px 4px 27px rgba(0, 0, 0, 0.75);
 border-radius: 20px;
 }
 
-.title{
+.judul{
 position: relative;
 width: 1155px;
 height: 88px;
@@ -19,7 +19,7 @@ background: #094067;
 border-radius: 20px 20px 0px 0px;
 }
 
-.title p{
+.judul p{
     position: absolute;
 width: 199px;
 height: 53px;

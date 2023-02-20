@@ -9,8 +9,6 @@ import React, { useState } from 'react';
 
 function CollapsibleExample() {
   const profile = "/assets/Profile User/person-circle 1.svg";
-  const pp ="https://www.figma.com/file/CqM84qh5XrJ3pbyCi6f2Hj/Healtify?node-id=544%3A62&t=ArSU8w0Dt3cOCvXo-4";
-
   const [activeLink, setActiveLink] = useState(null);
  
 
