@@ -1,4 +1,4 @@
-.boxLogin {
+.login {
   width: 530px;
   height: auto;
   background: rgba(196, 196, 196, 0.01);
@@ -12,11 +12,16 @@
   border-radius: 140.678px;
 }
 
-.boxLogin .title h1 {
+.login .pro {
+  background-color: #efefef;
+  padding: 20px;
+}
+
+.login .title h1 {
   color: #094067;
 }
 
-.boxLogin input {
+.login input {
   width: 340px;
   padding: 10px;
   border: none;
@@ -25,15 +30,7 @@
     inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.boxLogin select {
-  background: transparent !important;
-  border: none;
-  padding: 2px;
-  width: 120px;
-  border-bottom: 2px solid black;
-}
-
-.boxLogin button {
+.login button {
   width: 100%;
   background: linear-gradient(101.69deg, #167fca 10.68%, #094067 96.24%);
   border-radius: 15px;

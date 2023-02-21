@@ -4,7 +4,7 @@ import Obat from "./pages/page user/obat";
 import Dashboard from "./pages/page admin/dashboard";
 import DataUsers from "./pages/page admin/dataUserPage";
 import RegisterPage from "./pages/login-register/registerPage";
-import Login from "./pages/login-register/login";
+import LoginPage from "./pages/login-register/loginPage";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
 
         <Route path="/register" element={<RegisterPage />} />
 
