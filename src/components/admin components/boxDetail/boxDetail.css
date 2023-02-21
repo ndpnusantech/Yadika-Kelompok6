@@ -3,33 +3,31 @@
   width: 1155px;
   height: 729px;
   left: 320px;
-  top: 31px;
-
-  background: #ffffff;
+  top: 100px;
   box-shadow: 7px 4px 27px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
 }
 
-.main-box .title{
-position: relative;
-width: 1155px;
-height: 88px;
+.main-box .title {
+  position: relative;
+  width: 1155px;
+  height: 88px;
 
   background: #094067;
   border-radius: 20px 20px 0px 0px;
 }
 
-.main-box .title p{
-    position: absolute;
-width: 199px;
-height: 53px;
-top: 15px;
-left: 20px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: bold;
-font-size: 35px;
-line-height: 52px;
+.main-box .title p {
+  position: absolute;
+  width: 199px;
+  height: 53px;
+  top: 15px;
+  left: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 52px;
 
   /* identical to box height */
 

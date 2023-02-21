@@ -1,19 +1,9 @@
-footer h3{
-    font-weight: bold;
-    margin-left: 17rem;
-    margin-top: -5rem;
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-footer h5{
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-footer .loc {
-    margin-left: 38rem;
-    margin-top: -5rem;
-}
-
-footer .so{
-    margin-left: 68rem;
-    margin-top: -6rem;
+footer a {
+  text-decoration: none;
+  color: #000;
 }

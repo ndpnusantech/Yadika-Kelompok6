@@ -5,13 +5,8 @@ const HeroSection = () => {
   const wallpaperGelombang = "/assets/gelombang.svg";
   const logo = "/assets/logo/healtify.png";
 
-  const wallpaper = {
-    backgroundImage: `url(${wallpaperGelombang})`,
-    backgroundSize: "cover",
-  };
-
   return (
-    <div className="hero-section" style={wallpaper}>
+    <div className="hero-section">
       <Container className="d-flex align-items-center justify-content-between">
         <div className="title">
           <h5>Welcome....</h5>

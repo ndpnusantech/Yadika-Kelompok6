@@ -1,13 +1,13 @@
-import TableUser from "../../user components/dataUser/dataUser";
-import CollapsibleExample from "../../layouts/sidebar/sidebar";
+import Sidebar from "../../layouts/sidebar/sidebar";
+import TableUser from "../../admin components/dataUser/dataUser";
 import "./style.css"
 
 const DataUsers = () => {
     return (
-        <div className="DU">
-            <CollapsibleExample/>
-            <TableUser/>
+        <div className="DataUsers">
+            <Sidebar />
+            <TableUser />
         </div>
     )
 }
-export  default DataUsers;
+export default DataUsers;

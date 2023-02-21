@@ -1,0 +1,39 @@
+.boxLogin {
+  width: 530px;
+  height: auto;
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px 48.9702px 70.3162px -45.2033px rgba(255, 255, 255, 0.5),
+    inset 0px 8.78952px 13.8121px -5.02258px #ffffff,
+    inset 0px -102.963px 85.3839px -80.3614px rgba(96, 68, 145, 0.3),
+    inset 0px 123.053px 125.565px -60.271px rgba(202, 172, 255, 0.3),
+    inset 0px 5.02258px 22.6016px rgba(154, 146, 210, 0.3),
+    inset 0px 1.25565px 50.2258px rgba(227, 222, 255, 0.2);
+  backdrop-filter: blur(56.5041px);
+  border-radius: 140.678px;
+}
+
+.boxLogin .title h1 {
+  color: #094067;
+}
+
+.boxLogin input {
+  width: 340px;
+  padding: 10px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.boxLogin select {
+  background: transparent !important;
+  border: none;
+  padding: 2px;
+  border-bottom: 2px solid black;
+}
+
+.boxLogin button {
+  width: 100%;
+  background: linear-gradient(101.69deg, #167fca 10.68%, #094067 96.24%);
+  border-radius: 15px;
+}
