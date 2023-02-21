@@ -1,4 +1,4 @@
-import BoxDetail from "../../admin component/boxDetail/boxDetail/boxDetail";
+import BoxDetail from "../../admin components/boxDetail/boxDetail";
 import Sidebar from "../../layouts/sidebar/sidebar";
 import "./style.css";
 

@@ -1,4 +1,4 @@
-import "./BD.css";
+import "./boxDetail.css";
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
@@ -79,28 +79,28 @@ const BoxDetail = () => {
     return (
         <div className="main-box">
 
-    <div className="judul"><p>Dashboard</p></div>
-<div className="card">
-    <div className="produk">
-        <p>Produk</p>
-        <p>200</p>
-    </div>
-     
-    <div className="expired">
-    <p>expired</p>
-        <p>10</p>
-    </div>
-       
-    <div className="user">
-    <p>user</p>
-        <p>425</p>
-    </div>
-       
-    <div className="income">
-    <p>income</p>
-        <p>1000000</p>
-    </div>
-    </div>
+            <div className="judul"><p>Dashboard</p></div>
+            <div className="card">
+                <div className="produk">
+                    <p>Produk</p>
+                    <p>200</p>
+                </div>
+
+                <div className="expired">
+                    <p>expired</p>
+                    <p>10</p>
+                </div>
+
+                <div className="user">
+                    <p>user</p>
+                    <p>425</p>
+                </div>
+
+                <div className="income">
+                    <p>income</p>
+                    <p>1000000</p>
+                </div>
+            </div>
 
             <div className="title"><p>Dashboard</p></div>
             <div className="card">

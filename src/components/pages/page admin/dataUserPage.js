@@ -1,5 +1,5 @@
 import Sidebar from "../../layouts/sidebar/sidebar";
-import TableUser from "../../user components/dataUser/dataUser";
+import TableUser from "../../admin components/dataUser/dataUser";
 import "./style.css"
 
 const DataUsers = () => {
