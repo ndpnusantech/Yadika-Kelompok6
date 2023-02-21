@@ -33,6 +33,10 @@ const SemuaMacam = () => {
         <div className="d-flex flex-wrap justify-content-between">
           {obatList}
         </div>
+
+        <a href="" className="loadMore text-center">
+          <p>Load More</p>
+        </a>
       </Container>
     </div>
   );

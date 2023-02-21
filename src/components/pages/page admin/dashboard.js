@@ -1,17 +1,17 @@
-import CollapsibleExample from "../../layouts/sidebar/sidebar";
 import BoxDetail from "../../admin component/boxDetail/boxDetail/boxDetail";
+import Sidebar from "../../layouts/sidebar/sidebar";
 import "./style.css";
 
 
 const Dashboard = () => {
-    return(
+    return (
 
-     <div className="BD">
-    <CollapsibleExample />
-    <BoxDetail />
-    </div>
-        
-);
+        <div className="dashboard">
+            <Sidebar />
+            <BoxDetail />
+        </div>
+
+    );
 
 }
 
