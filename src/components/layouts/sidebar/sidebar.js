@@ -27,15 +27,6 @@ function Sidebar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        {/* <Nav.Link className="menu" onClick={() => setActiveLink('link1')}
-                            id={activeLink === 'link1' ? 'active' : ''} href="/dashboard" >Dashboard</Nav.Link>
-                        <Nav.Link className="menu" onClick={() => setActiveLink('link2')}
-                            id={activeLink === 'link2' ? 'active' : ''} >Storage</Nav.Link>
-                        <Nav.Link className="menu" onClick={() => setActiveLink('link3')}
-                            id={activeLink === 'link3' ? 'active' : ''} href="/dataUsers">Data User</Nav.Link>
-                        <Nav.Link className="menu" onClick={() => setActiveLink('link4')}
-                            id={activeLink === 'link4' ? 'active' : ''} >Order</Nav.Link> */}
-
                         <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
                             id={activeLink === 'link1' ? 'active' : ''}>Dashboard</Link>
                         <Link to="/storage" className="menu nav-link" onClick={() => setActiveLink('link2')}

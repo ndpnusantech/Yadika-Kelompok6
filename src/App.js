@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/page user/home";
-
-import Obat from "./components/pages/page user/obat";
-import Dashboard from "./components/pages/page admin/dashboard";
-import DataUsers from "./components/pages/page admin/dataUserPage";
-import RegisterPage from "./components/pages/login-register/registerPage";
+import RegisterPage from './pages/login-register/registerPage'
+import Home from './pages/page user/home'
+import Obat from './pages/page user/obat'
+import Dashboard from './pages/page admin/dashboard'
+import DataUsers from './pages/page admin/dataUserPage'
 
 function App() {
   return (

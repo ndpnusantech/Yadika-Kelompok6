@@ -1,6 +1,5 @@
-import BoxDetail from "../../admin components/boxDetail/boxDetail";
-import Sidebar from "../../layouts/sidebar/sidebar";
-import "./style.css";
+import Sidebar from '../../components/layouts/sidebar/sidebar'
+import BoxDetail from '../../components/admin components/boxDetail/boxDetail'
 
 
 const Dashboard = () => {
