@@ -5,6 +5,7 @@ import Dashboard from "./pages/page admin/dashboard";
 import DataUsers from "./pages/page admin/dataUserPage";
 import RegisterPage from "./pages/login-register/registerPage";
 import LoginPage from "./pages/login-register/loginPage";
+import RiwayatPage from "./pages/page user/riwayat";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/home" element={<Home />} />
 
         <Route path="/obat" element={<Obat />} />
+
+        <Route path="/riwayat" element={<RiwayatPage />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dataUsers" element={<DataUsers />} />

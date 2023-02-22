@@ -24,13 +24,13 @@ const NavigationBar = () => {
           <Link to="/obat" className="nav-link">
             Obat
           </Link>
-          <Link to="/obat" className="nav-link">
+          <Link to="/riwayat" className="nav-link">
             Riwayat
           </Link>
-          <Link to="/obat" className="nav-link">
+          <Link to="/pesanan" className="nav-link">
             Pesanan Saya
           </Link>
-          <Link to="/obat" className="nav-link">
+          <Link to="/contact" className="nav-link">
             Contact
           </Link>
         </Nav>
