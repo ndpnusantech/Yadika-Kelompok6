@@ -2,7 +2,6 @@ import { Container } from "react-bootstrap";
 import "./heroSection.css";
 
 const HeroSection = () => {
-  const wallpaperGelombang = "/assets/gelombang.svg";
   const logo = "/assets/logo/healtify.png";
 
   return (

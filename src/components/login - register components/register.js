@@ -1,33 +1,69 @@
-import { Container } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./register.css";
 
+
 const Register = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const fullnameRegist = e.target.fullname.value;
+    const emailRegist = e.target.email.value;
+    const usernameRegist = e.target.username.value;
+    const passRegist = e.target.password.value;
+    const repeatPass = e.target.repeat.value;
+    const gender = e.target.gender.value
+
+    const newUser = {
+      fullname: fullnameRegist,
+      email: emailRegist,
+      username: usernameRegist,
+      password: passRegist,
+      gender: gender
+    };
+
+    if (passRegist !== repeatPass) {
+      alert("Password don't match");
+    } else {
+      if (localStorage.getItem(usernameRegist) === null) {
+        alert("Succes");
+        localStorage.setItem(usernameRegist, JSON.stringify(newUser));
+        window.open("/", "_self");
+      } else {
+        alert("Username already exists");
+      }
+    }
+  }
+
+
   return (
     <Container>
       <div className="boxLogin d-flex flex-column align-items-center p-3 mx-auto">
         <div className="title mb-4 mt-2">
           <h1 className="fw-semibold">Sign Up</h1>
         </div>
-        <form className="d-flex flex-column">
-          <input
+        <Form className="d-flex flex-column" onSubmit={handleSubmit}>
+          <Form.Control
             type="text"
+            name="fullname"
             placeholder="Full name"
             className="mb-3 rounded-3"
           />
-          <input type="email" placeholder="Email" className="mb-3 rounded-3" />
-          <input
+          <Form.Control type="email" name="email" placeholder="Email" className="mb-3 rounded-3" />
+          <Form.Control
             type="text"
+            name="username"
             placeholder="Username"
             className="mb-3 rounded-3"
           />
-          <input
+          <Form.Control
             type="password"
+            name="password"
             placeholder="Password"
             className="mb-3 rounded-3"
           />
-          <input
+          <Form.Control
             type="password"
+            name="repeat"
             placeholder="Repeat password"
             className="mb-3 rounded-3"
           />
@@ -39,12 +75,12 @@ const Register = () => {
             Sign Up
           </button>
           <p className="mt-2 text-center">
-            Already have an account? <Link to='/register'>Sign in</Link>
+            Already have an account? <Link to='/'>Sign in</Link>
           </p>
-        </form>
+        </Form>
       </div>
-    </Container>
+    </Container >
   );
-};
+}
 
-export default Register;
+export default Register

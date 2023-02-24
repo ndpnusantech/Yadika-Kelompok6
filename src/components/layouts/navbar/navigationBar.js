@@ -4,7 +4,7 @@ import "./navigationBar.css";
 
 const NavigationBar = () => {
   const logo = "/assets/logo/logo.svg";
-  const profile = "/assets/Profile User/person-circle 1.svg";
+  const profile = "/assets/Profile User/person-circle 1.png";
 
   const styleImage = {
     width: 50,
