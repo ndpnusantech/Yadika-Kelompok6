@@ -6,6 +6,7 @@ import DataUsers from "./pages/page admin/dataUserPage";
 import RegisterPage from "./pages/login-register/registerPage";
 import LoginPage from "./pages/login-register/loginPage";
 import RiwayatPage from "./pages/page user/riwayat";
+import KeranjangPage from "./pages/page user/keranjang";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path="/obat" element={<Obat />} />
 
         <Route path="/riwayat" element={<RiwayatPage />} />
+
+        <Route path="/keranjang" element={<KeranjangPage/>} />
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dataUsers" element={<DataUsers />} />
