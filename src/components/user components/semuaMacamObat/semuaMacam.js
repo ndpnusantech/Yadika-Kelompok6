@@ -1,22 +1,17 @@
 import { Container, Form, Button } from "react-bootstrap";
-import CtaSM from "./CtaSM";
+import { dataObat } from "../../../data/dataObat";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./semuaMacam.css";
 
 const SemuaMacam = () => {
-  const obatArr = Array(10).fill();
+  const [limit, setLimit] = useState(8);
 
-  const obatList = obatArr.map((index) => {
-    return (
-      <CtaSM
-        key={index}
-        image="/assets/obat/Vicks Formula.png"
-        namaObat="Vicks Formula 44 Sirup 100 ml"
-        takaran="per botol"
-        hargaNormal="Rp 31.600 "
-        hargaDiskon="Rp 19.100"
-      />
-    );
-  });
+  const handleLoadMore = (e) => {
+    e.preventDefault();
+    setLimit(limit + 8);
+  };
+
   return (
     <div className="Semua-Macam">
       <Container>
@@ -30,13 +25,33 @@ const SemuaMacam = () => {
           />
           <Button variant="outline-success">Search</Button>
         </Form>
-        <div className="d-flex flex-wrap justify-content-between">
-          {obatList}
+
+        <div className="listObat d-flex flex-wrap justify-content-between align-items-center">
+          {dataObat.slice(0, limit).map((data) => {
+            return (
+              <div className="card mb-5">
+                <center>
+                  <Link to="/detailObat">
+                    <img src={data.image} alt="" />
+                  </Link>
+                </center>
+                <h5 className="text-truncate">{data.namaObat}</h5>
+                <p className="text-truncate">{data.takaran}</p>
+                <div className="d-flex justify-content-start">
+                  <h6 className="normal">{data.hargaNormal}</h6>
+                  <h6>{data.hargaDiskon}</h6>
+                </div>
+                <button className="btn btn-md p-2  fw-semibold">Tambah</button>
+              </div>
+            );
+          })}
         </div>
 
-        <a href="" className="loadMore text-center">
-          <p>Load More</p>
-        </a>
+        <div className="loadMore mb-5">
+          <a href="" className="loadMore text-center" onClick={handleLoadMore}>
+            <p>Load More</p>
+          </a>
+        </div>
       </Container>
     </div>
   );
