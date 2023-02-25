@@ -11,7 +11,7 @@ return (
             <td>Product</td>
             <td>Total Harga</td>
             <td>Payment Method</td>
-            <td>Id Pesanan</td>
+            <td>Id Pesanan </td>
         </tr>
     </thead>
         

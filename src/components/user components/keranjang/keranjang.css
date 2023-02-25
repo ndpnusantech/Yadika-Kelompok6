@@ -1,63 +1,75 @@
+.keranjang h1{
+    margin-left: 76px;
+    margin-bottom: 16px;
+}
+.keranjang img{
+    margin-top: 27px;
+    margin-left: 39px;
+    margin-bottom: 46px;
+}
 .keranjang .box{
     border: 1px solid black;
-    height: auto;
-    padding: 20px;
-    width: 60%;
-    border-radius: 13px;
+    height: 419px;
+    width: 808px;
+   margin-left: 76px;
+   margin-right: 110px;
+   border-radius: 10px;
 }
-
-.keranjang{
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.keranjang .box table th{
-    padding: 7px;
-    text-align: center;
-}
-
 .keranjang .box table{
-    width: 100%;
-    text-align: center;
-    border: none;
-    margin-top: 30%;
+width: 100%;
+text-align: center;
+align-items: center;
+}
+.keranjang .box  .mg-2{
+    align-items: center;
+}
+.keranjang .box table .OP{
+    border-radius: 50px;
+    width: 50px;
+}
+.keranjang .box button{
+    width: 36px;
+    height: 31px;
+}
+.keranjang .box .mg{
+    display: flex;
+    align-items: center;
+}
+.keranjang .box span{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.keranjang .box table .nama{
-    width: 38%;
+.keranjang .pesanan{
+    border: 1px solid black;
+    width: 318px;
+    height: 419px;
+    margin-top: -424px;
+    margin-left: 1000px;
+    border-radius: 10px;
 }
-
-.keranjang .box table .jumlah{
-    width: 28%;
+.keranjang .pesanan h3{
+    margin-left: 26px;
+    margin-top: 19px;
+    margin-bottom: 11px;
 }
-
-.keranjang .box table .td{
-    padding: 30px;
+.keranjang .pesanan hr{
+    background-color: black;
+    
 }
-
-.keranjang .box table .harga{
-    margin-top: -80px;
+.keranjang .pesanan p{
+    margin-left: 26px;
+    font-weight: bold;
 }
-
-.keranjang .pesanan table{
-    border: 1px soldi black;
-    width: 240px;
-    border-radius: 110px;
+.keranjang .pesanan .Viks{
+    margin-bottom: 170px;
 }
-
-.keranjang .pesanan table th{
-    padding: 10px;
-    height: 220px;
-    width: 100px;
-}
-
-.keranjang .pesanan table h1{
-    margin-top: -99px;
-}
-
-.keranjang h1{
-    font-size: 30px;
-    margin-left: 135px;
-    margin-top: 90px;
+.keranjang .pesanan button{
+    width: 214px;
+    height: 44px;
+    border-radius: 7px;
+    margin-left: 52px;
+    margin-top: 24px;
+    color: white;
+    background-color: #3DA9FC;
 }
