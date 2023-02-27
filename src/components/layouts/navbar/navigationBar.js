@@ -11,6 +11,8 @@ const NavigationBar = () => {
     marginRight: 7,
   };
 
+  const dataStorage = JSON.parse(localStorage.getItem("user"));
+
   return (
     <Navbar variant="light" className="p-3">
       <Container>
@@ -35,12 +37,12 @@ const NavigationBar = () => {
           </Link>
         </Nav>
         <div className="profileUser">
-          <a href="/profileUser">
+          <a href="/profile">
             <div className="profile">
               <img src={profile} width="40px" alt="" />
             </div>
             <div className="username">
-              <h5>Iqbal</h5>
+              <h5>{dataStorage.username ? dataStorage.username : "Guest"}</h5>
             </div>
           </a>
         </div>

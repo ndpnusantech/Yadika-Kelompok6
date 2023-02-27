@@ -1,11 +1,10 @@
 import "./login.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
+import { useState } from "react";
 
 const Login = () => {
   const profile = "/assets/Profile User/profile.png";
-
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -15,20 +14,18 @@ const Login = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(formData);
+  // console.log(formData);
 
+  // const user = JSON.parse(localStorage.getItem(formData.username));
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('pw :' + formData.password);
     // Login
-    const user = JSON.parse(localStorage.getItem(formData.username));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (user === null) {
       alert("Username not registered");
     } else {
-      if (
-        formData.password !== user.password
-      ) {
+      if (formData.password !== user.password) {
         alert("Password wrong");
       } else {
         window.open("/home", "_self");
@@ -42,7 +39,6 @@ const Login = () => {
 
   return (
     <Container>
-
       <div className="login d-flex flex-column align-items-center p-3 mx-auto">
         <div className="title mb-2 mt-3">
           <h1 className="fw-semibold">Sign In</h1>
