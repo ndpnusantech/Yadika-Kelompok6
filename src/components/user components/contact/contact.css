@@ -1,0 +1,83 @@
+.contact .title h1{
+    margin-top: 38px;
+    margin-left: 180px;
+    color: #094067;
+    font-weight: bolder;
+}
+.contact p{
+    margin-left: 180px;
+    color: #5F6C7B;
+    font-weight: bold;
+}
+.contact .form .name{
+    margin-left: 180px;
+    border: none;
+    width: 510px;
+    height: 68px;
+    color: #094067;
+    font-weight: bold;
+}
+.contact .form .email{
+    margin-left: 180px;
+    border: none;
+    width: 510px;
+    height: 68px;
+    color: #094067;
+    font-weight: bold;
+}
+.contact .form .message{
+    margin-left: 180px;
+    border: none;
+    width: 510px;
+    height: 68px;
+    color: #094067;
+    font-weight: bold;
+}
+.contact button{
+    margin-left: 180px;
+    width: 510px;
+    height: 68px;
+    margin-top: 52px;
+    color: #fcfdfd;
+    background-color: #094067;
+    font-size: 30px;
+}
+.contact hr{
+    border: 1px solid rgb(5, 5, 5);
+    width: 510px;
+    margin-left: 180px;
+}
+.contact .box-1{
+    width: 315px;
+    height: 695px;
+    margin-left: 1105px;
+    background-color: #094067;
+    margin-top: -600px;
+    z-index: -1;
+}
+.contact .box-2 {
+    width: 443px;
+    height: 513px;
+    right: 0px;
+    background-color: #56A2D9;
+    z-index: 2;
+    position: absolute;
+    top: 70px;
+    padding-left: 20px;
+}
+.contact .box-2 h1{
+    text-align: left !important;
+    color: white;
+    margin-top: 61px;
+    font-weight: 600;
+    margin-bottom: 26px;
+}
+.contact .box-3{
+    width: 60px;
+    height: 60px;
+    background-color: #094067;
+    position: absolute;
+    top: 50px;
+    right: 400px;
+    z-index: 2;
+}
