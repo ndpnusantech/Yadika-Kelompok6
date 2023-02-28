@@ -31,42 +31,42 @@ const ContentModalBody = () => {
           placeholder="Username"
           name="username"
           className="mb-2"
-          required
+         
         />
         <Form.Control
           type="text"
           placeholder="Email"
           name="email"
           className="mb-2"
-          required
+         
         />
         <Form.Control
           type="text"
           placeholder="No Handphone"
           name="noHp"
           className="mb-2"
-          required
+         
         />
         <Form.Control
           type="text"
           placeholder="Age"
           name="age"
           className="mb-2"
-          required
+         
         />
         <Form.Control
           type="text"
           placeholder="Berat Badan"
           name="beratBadan"
           className="mb-2"
-          required
+         
         />
         <Form.Control
           type="text"
           placeholder="Tinggi Badan"
           name="tinggiBadan"
           className="mb-2"
-          required
+         
         />
 
         <button className="btn btn-primary btn-md mt-5 mx-auto w-100">

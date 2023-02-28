@@ -8,7 +8,8 @@ import LoginPage from "./pages/login-register/loginPage";
 import RiwayatPage from "./pages/page user/riwayat";
 import KeranjangPage from "./pages/page user/keranjang";
 import ProfileUser from "./pages/page user/profileUser";
-import ContactPage from "./pages/page user/contact";
+import ContactPage from "./pages/page user/contactPage";
+
 
 
 
