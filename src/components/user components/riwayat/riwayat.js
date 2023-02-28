@@ -1,31 +1,45 @@
 import "./riwayat.css";
+import { Table, Container } from "react-bootstrap";
 
 const Riwayat = () => {
-return (
-    <div className="riwayat">
-    <h1>Riwayat Pembelian</h1>
-    <table className="rounded">
-    <thead>
-        <tr>
-            <td>No</td>
-            <td>Product</td>
-            <td>Total Harga</td>
-            <td>Payment Method</td>
-            <td>Id Pesanan </td>
-        </tr>
-    </thead>
-        
-        <tr>
-            <td>1</td>
-            <td>Vicks Formula 44 Sirup 100 ml</td>
-            <td>Rp. 95.500</td>
-            <td>Dana</td>
-            <td>320483602710924</td>
-        </tr>
-
-    </table>
-    </div>
-);
+  return (
+    <Container>
+      <div className="riwayatPembelian">
+        <div className="title mt-5 mb-5">
+          <h3 className="fw-semibold">Riwayat Pembelian</h3>
+        </div>
+        <Table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </Container>
+  );
 };
 
 export default Riwayat;
