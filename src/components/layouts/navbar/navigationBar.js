@@ -11,7 +11,9 @@ const NavigationBar = () => {
     marginRight: 7,
   };
 
-  const dataStorage = JSON.parse(localStorage.getItem("user"));
+  const dataStorage = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : {};
 
   return (
     <Navbar variant="light" className="p-3">

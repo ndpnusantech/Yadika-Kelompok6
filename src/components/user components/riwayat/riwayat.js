@@ -8,32 +8,25 @@ const Riwayat = () => {
         <div className="title mt-5 mb-5">
           <h3 className="fw-semibold">Riwayat Pembelian</h3>
         </div>
-        <Table>
+        <Table className="rounded text-center">
           <thead>
             <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
+              <th>No</th>
+              <th>Product</th>
+              <th>Qty</th>
+              <th>Total Harga</th>
+              <th>Payment Method</th>
+              <th>ID Pesanan</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Larry the Bird</td>
-              <td>@twitter</td>
+              <td>Vicks Formula 44 Sirup 100 ml</td>
+              <td>4</td>
+              <td>95.500</td>
+              <td>Ovo</td>
+              <td>320483602710924</td>
             </tr>
           </tbody>
         </Table>

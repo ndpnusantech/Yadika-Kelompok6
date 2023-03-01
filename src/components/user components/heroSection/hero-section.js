@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./heroSection.css";
 
 const HeroSection = () => {
@@ -14,7 +15,9 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem harum
             eligendi optio maiores beatae fuga ex.
           </p>
-          <button className="btn  btn-md">Contact Us</button>
+          <Link to="/contact">
+            <button className="btn  btn-md">Contact Us</button>
+          </Link>
         </div>
         <div className="logo">
           <img src={logo} alt="" width="300px" />

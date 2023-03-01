@@ -1,3 +1,15 @@
 .riwayatPembelian {
-  border: 2px solid red;
+}
+
+.riwayatPembelian table th {
+  border-right: 1px solid black;
+}
+.riwayatPembelian table td {
+  border-right: 1px solid black;
+  border-bottom: 0px;
+}
+
+.riwayatPembelian table {
+  border: 1px solid black;
+  border-radius: 20px;
 }

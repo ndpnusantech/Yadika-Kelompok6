@@ -7,7 +7,9 @@ const CardUser = () => {
   const photo = "assets/Profile User/profile.png";
   const backIcon = "assets/Icon Sosial Media/arrow-right-circle 1.png";
 
-  const dataStorage = JSON.parse(localStorage.getItem("user"));
+  const dataStorage = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : {};
 
   const [show, setShow] = useState(false);
 

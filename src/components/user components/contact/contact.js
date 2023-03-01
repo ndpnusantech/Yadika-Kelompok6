@@ -1,8 +1,8 @@
-import { Container } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 import "./contact.css";
 
 const Contact = () => {
-  const surat = "./assets/contact/surat.svg";
+  const surat = "./assets/contact/mail.svg";
   const telpon = "./assets/contact/telpon.svg";
   const gedung = "./assets/contact/gedung.svg";
   const jam = "./assets/contact/jam.svg";
@@ -11,49 +11,60 @@ const Contact = () => {
     <Container>
       <div className="contact">
         <div className="title">
-          <h1>Contact Us</h1>
+          <h1
+            className="fw-semibold mt-4 mb-1sssssssss"
+            style={{ color: "#094067" }}
+          >
+            Contact Us
+          </h1>
         </div>
-
-        <p>
-          Lorem ipsum dolor sit amet, deleniti <br></br> repellat voluptatem
-          error exercitationem.
-        </p>
-        <div className="form">
-          <label>Name</label> <br />
-          <input type="text" className="mb-2" /> <br />
-          <label>Email</label> <br />
-          <input type="text" className="mb-2" /> <br />
-          <label>Message</label> <br />
-          <input type="text" className="mb-2" /> <br />
+        <div className="description mb-2">
+          <p className="opacity-50 fw-semibold">
+            Lorem ipsum dolor sit amet, deleniti <br></br> repellat voluptatem
+            error exercitationem.
+          </p>
         </div>
-        <button>Send</button>
+        <Form>
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" className="mb-3" />
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="text" className="mb-3" />
+          <Form.Label>Message</Form.Label>
+          <Form.Control type="text" className="mb-5" />
+          <button
+            className="btn btn-md w-100 p-2 fs-4 text-white fw-semibold"
+            style={{ backgroundColor: "#094067" }}
+          >
+            Send
+          </button>
+        </Form>
         <div className="box-1"></div>
         <div className="box-2">
-          <h1 align="left">Info</h1>
+          <h1 className="mt-5 mb-4 display-5 fw-semibold">Info</h1>
           <table>
             <tr>
               <td>
-                <img src={surat} alt="" />
+                <img src={surat} />
               </td>
-              <td>lenacahyani82@gmail.com</td>
+              <td>healtifyofficial@gmail.com</td>
             </tr>
             <tr>
               <td className="pt-5 pe-4">
-                <img src={telpon} alt="" />
+                <img src={telpon} />
               </td>
-              <td className="pt-5">lenacahyani82@gmail.com</td>
+              <td className="pt-5">+62 223-2883-5502</td>
             </tr>
             <tr>
               <td className="pt-5">
-                <img src={gedung} alt="" />
+                <img src={gedung} />
               </td>
-              <td className="pt-5">lenacahyani82@gmail.com</td>
+              <td className="pt-5">Healtify Medical Center</td>
             </tr>
             <tr>
               <td className="pt-5">
-                <img src={jam} alt="" />
+                <img src={jam} />
               </td>
-              <td className="pt-5">lenacahyani82@gmail.com</td>
+              <td className="pt-5">08.00 - 21.00 WIB</td>
             </tr>
           </table>
         </div>

@@ -31,7 +31,7 @@ const ContentModalBody = () => {
           placeholder="Username"
           name="username"
           className="mb-2"
-         
+
         />
         <Form.Control
           type="text"
