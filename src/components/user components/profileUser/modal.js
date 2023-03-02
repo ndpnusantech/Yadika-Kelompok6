@@ -33,42 +33,42 @@ const ContentModalBody = () => {
           placeholder="Username"
           name="username"
           className="mb-3"
-          value={data.username}
+          // value={data.username}
         />
         <Form.Control
           type="text"
           placeholder="Email"
           name="email"
           className="mb-3"
-          value={data.email}
+          // value={data.email}
         />
         <Form.Control
           type="text"
           placeholder="No Handphone"
           name="noHp"
           className="mb-3"
-          value={data.noHandphone}
+          // value={data.noHandphone}
         />
         <Form.Control
           type="text"
           placeholder="Usia"
           name="age"
           className="mb-3"
-          value={data.age}
+          // value={data.age}
         />
         <Form.Control
           type="text"
           placeholder="Berat Badan"
           name="beratBadan"
           className="mb-3"
-          value={data.beratBadan}
+          // value={data.beratBadan}
         />
         <Form.Control
           type="text"
           placeholder="Tinggi Badan"
           name="tinggiBadan"
           className="mb-2"
-          value={data.tinggiBadan}
+          // value={data.tinggiBadan}
         />
 
         <button className="btn btn-primary btn-md mt-5 mx-auto w-100">

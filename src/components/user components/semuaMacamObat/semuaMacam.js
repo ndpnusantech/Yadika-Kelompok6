@@ -16,14 +16,14 @@ const SemuaMacam = () => {
     <div className="Semua-Macam">
       <Container>
         <h3 className="mb-4">Semua Macam - Macam Obat</h3>
-        <Form className="d-flex m-5">
+        <Form className="d-flex w-50 mb-5 mt-5">
           <Form.Control
             type="search"
             placeholder="Search"
-            className="me-2"
+            className="me-2 p-2"
             aria-label="Search"
           />
-          <Button variant="outline-success">Search</Button>
+          <Button variant="outline-primary">Search</Button>
         </Form>
 
         <div className="listObat d-flex flex-wrap justify-content-between align-items-center">
