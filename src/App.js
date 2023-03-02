@@ -9,6 +9,7 @@ import RiwayatPage from "./pages/page user/riwayat";
 import KeranjangPage from "./pages/page user/keranjang";
 import ProfileUser from "./pages/page user/profileUser";
 import ContactPage from "./pages/page user/contactPage";
+import PagePesananSaya from "./pages/page user/pesananSayaPage";
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dataUsers" element={<DataUsers />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/pesanan" element={<PagePesananSaya />} />
       </Routes>
     </BrowserRouter>
   );
