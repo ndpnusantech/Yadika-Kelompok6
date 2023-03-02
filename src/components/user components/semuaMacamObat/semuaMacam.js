@@ -46,12 +46,15 @@ const SemuaMacam = () => {
             );
           })}
         </div>
-
-        <div className="loadMore mb-5">
-          <a href="" className="loadMore text-center" onClick={handleLoadMore}>
-            <p>Load More</p>
-          </a>
-        </div>
+        {
+          dataObat.length > limit ? (
+            <div className="loadMore mb-5">
+              <a href="" className="loadMore text-center" onClick={handleLoadMore}>
+                <p>Load More</p>
+              </a>
+            </div>
+          ) : null
+        }
       </Container>
     </div>
   );

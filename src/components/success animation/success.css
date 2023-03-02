@@ -1,6 +1,15 @@
+.boxSuccess {
+  margin-top: 130px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px 5px rgba(73, 73, 73, 0.486);
+}
+
 .success-checkmark {
   width: 80px;
-  height: 115px;
+  height: auto;
+  padding-bottom: 20px;
   margin: 0 auto;
 }
 .check-icon {
@@ -58,7 +67,7 @@
   right: 8px;
   width: 47px;
   transform: rotate(-45deg);
-  animation: icon-line-long 0.75s;
+  animation: icon-line-long 1s;
 }
 
 .icon-circle {
