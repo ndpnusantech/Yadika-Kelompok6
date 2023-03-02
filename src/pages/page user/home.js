@@ -1,6 +1,5 @@
 import NavigationBar from "../../components/layouts/navbar/navigationBar";
 import HeroSection from "../../components/user components/heroSection/hero-section";
-import '../style/style.css'
 
 const Home = () => {
 
