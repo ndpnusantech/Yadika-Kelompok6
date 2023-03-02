@@ -10,6 +10,7 @@ import KeranjangPage from "./pages/page user/keranjang";
 import ProfileUser from "./pages/page user/profileUser";
 import ContactPage from "./pages/page user/contactPage";
 import PagePesananSaya from "./pages/page user/pesananSayaPage";
+// import Success from "./components/success animation/success";
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/dataUsers" element={<DataUsers />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/pesanan" element={<PagePesananSaya />} />
+        {/* <Route path="/test" element={<Success />} /> */}
       </Routes>
     </BrowserRouter>
   );
