@@ -28,7 +28,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dataUsers" element={<DataUsers />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/detail" element={<DetailPage />} />
+        <Route path="/detailObat" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );

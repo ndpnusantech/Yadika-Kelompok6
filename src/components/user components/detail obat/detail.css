@@ -1,32 +1,18 @@
-.detail img{
-    margin-left: 183px;
-    margin-top: 47px;
-    width: 214px;
-    height: 207px;
-    margin-bottom: 27px;
+.detail .des {
+  margin-left: 133px;
+  font-weight: bold;
 }
-.detail .des{
-    margin-left: 133px;
-    font-weight: bold;
+
+.detail .box {
+  background: rgba(53, 128, 197, 0.12);
+  box-shadow: 2px 2px 10px 5px #3da9fc67;
+  border-radius: 15px;
+  width: 550px;
+  height: 520px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #999999 #f5f5f5;
 }
-.detail button{
-    width: 320px;
-    height: 62px;
-    background-color: #3DA9FC;
-    color: white;
-    border-radius: 10px;
-    font-size: larger;
-    margin-top: 34px;
-}
-.detail .box{
-    background: rgba(53, 128, 197, 0.12);
-    border-radius: 10px;
-    color: black;
-    position: absolute;
-    width: 502px;
-    height: 574px;
-    left: 844px;
-    top: 157px;
-    padding: 10px;
-    overflow-y: scroll;
+.detail .box h4 {
+  font-weight: 600;
 }
