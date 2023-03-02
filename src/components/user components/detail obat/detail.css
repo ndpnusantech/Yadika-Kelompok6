@@ -1,0 +1,32 @@
+.detail img{
+    margin-left: 183px;
+    margin-top: 47px;
+    width: 214px;
+    height: 207px;
+    margin-bottom: 27px;
+}
+.detail .des{
+    margin-left: 133px;
+    font-weight: bold;
+}
+.detail button{
+    width: 320px;
+    height: 62px;
+    background-color: #3DA9FC;
+    color: white;
+    border-radius: 10px;
+    font-size: larger;
+    margin-top: 34px;
+}
+.detail .box{
+    background: rgba(53, 128, 197, 0.12);
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    width: 502px;
+    height: 574px;
+    left: 844px;
+    top: 157px;
+    padding: 10px;
+    overflow-y: scroll;
+}
