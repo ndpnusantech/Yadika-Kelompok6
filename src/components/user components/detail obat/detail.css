@@ -1,0 +1,18 @@
+.detail .des {
+  margin-left: 133px;
+  font-weight: bold;
+}
+
+.detail .box {
+  background: rgba(53, 128, 197, 0.12);
+  box-shadow: 2px 2px 10px 5px #3da9fc67;
+  border-radius: 15px;
+  width: 550px;
+  height: 520px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #999999 #f5f5f5;
+}
+.detail .box h4 {
+  font-weight: 600;
+}

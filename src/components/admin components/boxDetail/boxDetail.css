@@ -1,17 +1,17 @@
 .main-box {
   position: absolute;
-  width: 1155px;
-  height: 729px;
-  left: 320px;
-  top: 100px;
+  width: 80%;
+  height: 90%;
+  left: 15%;
+  top: 5%;
   box-shadow: 7px 4px 27px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
 }
 
 .main-box .title {
   position: relative;
-  width: 1155px;
-  height: 88px;
+  width: 100%;
+  height: 10%;
 
   background: #094067;
   border-radius: 20px 20px 0px 0px;
@@ -19,14 +19,14 @@
 
 .main-box .title p {
   position: absolute;
-  width: 199px;
-  height: 53px;
-  top: 15px;
-  left: 20px;
+  width: 100%;
+  height: 100%;
+  top: 1%;
+  left: 3%;
   font-family: "Poppins";
   font-style: normal;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 80%;
   line-height: 52px;
 
   /* identical to box height */
@@ -36,30 +36,27 @@
 
 .produk {
   position: absolute;
-  width: 216px;
-  height: 126px;
-  left: 34px;
-  top: 146px;
+  width: 17%;
+  left: 5%;
+  margin-top: 3%;
   background: #ba8c48;
   border-radius: 10px;
 }
 
 .expired {
   position: absolute;
-  width: 216px;
-  height: 126px;
-  left: 321px;
-  top: 146px;
+  width: 17%;
+  left: 30%;
+  margin-top: 3%;
 
   background: #d05b5b;
   border-radius: 10px;
 }
 .user {
   position: absolute;
-  width: 216px;
-  height: 126px;
-  left: 608px;
-  top: 146px;
+  width: 17%;
+  left: 55%;
+  margin-top: 3%;
 
   background: #56a2d9;
   border-radius: 10px;
@@ -67,10 +64,9 @@
 
 .income {
   position: absolute;
-  width: 216px;
-  height: 126px;
-  left: 895px;
-  top: 146px;
+  width: 17%;
+  left: 80%;
+  margin-top: 3%;
 
   background: #458427;
   border-radius: 10px;
@@ -78,18 +74,17 @@
 
 .chart {
   position: absolute;
-  width: 650px;
-  height: 400px;
-  left: -150px;
-  top: 309px;
+  width: 45%;
+  height: 45%;
+  top: 50%;
 }
 
 .Balok {
   position: absolute;
-  width: 736px;
-  height: 346px;
+  width: 55%;
+  height: 50%;
   left: 375px;
-  top: 351px;
+  top: 50%;
 }
 
 .main-box .card p {
@@ -100,12 +95,10 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 90%;
 
   color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.main-box .card {
-  margin-top: -100px;
-}
+
