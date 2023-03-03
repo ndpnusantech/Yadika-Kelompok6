@@ -29,9 +29,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dataUsers" element={<DataUsers />} />
         <Route path="/contact" element={<ContactPage />} />
-
         <Route path="/detailObat" element={<DetailPage />} />
-
         <Route path="/pesanan" element={<PagePesananSaya />} />
       </Routes>
     </BrowserRouter>

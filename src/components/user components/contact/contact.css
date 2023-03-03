@@ -49,4 +49,14 @@
   top: 100px;
   right: 370px;
   z-index: 2;
+  animation: rotate 2s ease;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

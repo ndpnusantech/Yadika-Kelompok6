@@ -2,7 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 
 const ContentModalBody = () => {
-  const data = JSON.parse(localStorage.getItem("user"));
+  // const data = JSON.parse(localStorage.getItem("user"));
 
   const handleSave = (e) => {
     e.preventDefault();

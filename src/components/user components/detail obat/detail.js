@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./detail.css";
 
 const Detail = () => {
@@ -18,12 +19,14 @@ const Detail = () => {
             </span>
             Rp 19.100
           </p>
-          <button
-            className="btn btn-md w-100 p-3 text-white mt-5 fw-semibold fs-5"
-            style={{ backgroundColor: "#3DA9FC" }}
-          >
-            Tambah ke Keranjang
-          </button>
+          <Link to="/keranjang">
+            <button
+              className="btn btn-md w-100 p-3 text-white mt-5 fw-semibold fs-5"
+              style={{ backgroundColor: "#3DA9FC" }}
+            >
+              Tambah ke Keranjang
+            </button>
+          </Link>
         </div>
         <div className="box mt-3 mb-2 p-3">
           <h4>Dekripsi</h4>

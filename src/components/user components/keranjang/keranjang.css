@@ -1,75 +1,18 @@
-.keranjang h1{
-    margin-left: 76px;
-    margin-bottom: 16px;
-}
-.keranjang img{
-    margin-top: 27px;
-    margin-left: 39px;
-    margin-bottom: 46px;
-}
-.keranjang .box{
-    border: 1px solid black;
-    height: 419px;
-    width: 808px;
-   margin-left: 76px;
-   margin-right: 110px;
-   border-radius: 10px;
-}
-.keranjang .box table{
-width: 100%;
-text-align: center;
-align-items: center;
-}
-.keranjang .box  .mg-2{
-    align-items: center;
-}
-.keranjang .box table .OP{
-    border-radius: 50px;
-    width: 50px;
-}
-.keranjang .box button{
-    width: 36px;
-    height: 31px;
-}
-.keranjang .box .mg{
-    display: flex;
-    align-items: center;
-}
-.keranjang .box span{
-    margin-left: 20px;
-    margin-right: 20px;
+.keranjang .tableKeranjang {
+  border: 1px solid black;
+  width: 60%;
+  margin-left: 76px;
+  border-radius: 10px;
 }
 
-.keranjang .pesanan{
-    border: 1px solid black;
-    width: 318px;
-    height: 419px;
-    margin-top: -424px;
-    margin-left: 1000px;
-    border-radius: 10px;
+.keranjang .pesanan {
+  border: 1px solid black;
+  width: 318px;
+  height: 419px;
+  border-radius: 10px;
 }
-.keranjang .pesanan h3{
-    margin-left: 26px;
-    margin-top: 19px;
-    margin-bottom: 11px;
-}
-.keranjang .pesanan hr{
-    background-color: black;
-    
-}
-.keranjang .pesanan p{
-    margin-left: 26px;
-    font-weight: bold;
-}
-.keranjang .pesanan .Viks{
-    margin-bottom: 170px;
-}
-.keranjang .pesanan button{
-    width: 214px;
-    height: 44px;
-    border-radius: 7px;
-    margin-left: 52px;
-    margin-top: 24px;
-    color: white;
-    background-color: #3DA9FC;
+
+.keranjang .pesanan hr {
+  background-color: rgba(0, 0, 0, 0.473);
+  opacity: 1;
 }
