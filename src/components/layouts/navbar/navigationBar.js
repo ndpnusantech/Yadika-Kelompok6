@@ -39,14 +39,14 @@ const NavigationBar = () => {
           </Link>
         </Nav>
         <div className="profileUser">
-          <a href="/profile">
+          <Link to="/profile">
             <div className="profile">
               <img src={profile} width="40px" alt="" />
             </div>
             <div className="username">
               <h5>{dataStorage.username ? dataStorage.username : "Guest"}</h5>
             </div>
-          </a>
+          </Link>
         </div>
       </Container>
     </Navbar>

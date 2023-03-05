@@ -1,9 +1,24 @@
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./detail.css";
 
 const Detail = () => {
   const obat = "./assets/obat/Vicks Formula.png";
+
+  const [Qty, setQty] = useState(0);
+
+  const tambah = () => {
+    setQty(Qty + 1);
+  };
+
+  const kurang = () => {
+    if (Qty < 1) {
+      setQty(0);
+    } else {
+      setQty(Qty - 1);
+    }
+  };
 
   return (
     <Container>
@@ -19,9 +34,14 @@ const Detail = () => {
             </span>
             Rp 19.100
           </p>
-          <Link to="/keranjang">
+          <div className="Qty">
+            <button onClick={tambah}>+</button>
+            <span className="me-3 ms-3">{Qty}</span>
+            <button onClick={kurang}>-</button>
+          </div>
+          <Link to="/keranjang" className="mt-5">
             <button
-              className="btn btn-md w-100 p-3 text-white mt-5 fw-semibold fs-5"
+              className="btn btn-md w-100 p-3 text-white fw-semibold fs-5"
               style={{ backgroundColor: "#3DA9FC" }}
             >
               Tambah ke Keranjang

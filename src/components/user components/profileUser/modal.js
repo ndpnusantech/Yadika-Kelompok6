@@ -1,33 +1,12 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 
-const ContentModalBody = () => {
+const ContentModalBody = (props) => {
   // const data = JSON.parse(localStorage.getItem("user"));
-
-  const handleSave = (e) => {
-    e.preventDefault();
-    const newUsername = e.target.username.value;
-    const newEmail = e.target.email.value;
-    const newNoHp = e.target.noHp.value;
-    const addAge = e.target.age.value;
-    const addBB = e.target.beratBadan.value;
-    const addTB = e.target.tinggiBadan.value;
-
-    let user = JSON.parse(localStorage.getItem("user")) || {};
-
-    user.username = newUsername;
-    user.email = newEmail;
-    user.noHandphone = newNoHp;
-    user.age = addAge;
-    user.beratBadan = addBB;
-    user.tinggiBadan = addTB;
-
-    localStorage.setItem("user", JSON.stringify(user));
-  };
 
   return (
     <React.Fragment>
-      <Form className="p-3" onSubmit={handleSave}>
+      <Form className="p-3" onSubmit={props.onSubmit}>
         <Form.Control
           type="text"
           placeholder="Username"
