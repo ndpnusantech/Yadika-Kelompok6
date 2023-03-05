@@ -4,11 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./sidebar.css";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 
 
 
 function Sidebar() {
+    const location = useLocation();
 
     const profile = "/assets/Profile User/person-circle 1.svg";
 
@@ -19,6 +21,7 @@ function Sidebar() {
     return (
         <Navbar className="nav" >
             <Container>
+              
                 <div className="bgprof">
                     <img className="Profile-admin" src={profile} width="132px" alt="profile" />
                     <p>Fahmi Fahrizal</p>
@@ -28,17 +31,17 @@ function Sidebar() {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
-                            id={activeLink === 'link1' ? 'active' : ''}>Dashboard</Link>
+                             id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
                         <Link to="/storage" className="menu nav-link" onClick={() => setActiveLink('link2')}
-                            id={activeLink === 'link2' ? 'active' : ''}>Storage</Link>
+                             id={location.pathname === '/storage' ? 'active' : ''}>Storage</Link>
                         <Link to="/dataUsers" className="menu nav-link" onClick={() => setActiveLink('link3')}
-                            id={activeLink === 'link3' ? 'active' : ''}>Data Users</Link>
+                             id={location.pathname === '/dataUsers' ? 'active' : ''}>Data Users</Link>
                         <Link to="/order" className="menu nav-link" onClick={() => setActiveLink('link4')}
-                            id={activeLink === 'link4' ? 'active' : ''}>Order</Link>
+                             id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
                     </Nav>
                     <Nav className="you-auto">
-                        <Nav.Link className="menu" href="#deets">Setting</Nav.Link>
-                        <Nav.Link className="menu" eventKey={2} href="#memes">
+                        <Nav.Link className="menuBottom" href="#deets">Setting</Nav.Link>
+                        <Nav.Link className="menuBottom" eventKey={2} href="#memes">
                             Logout
                         </Nav.Link>
                     </Nav>
