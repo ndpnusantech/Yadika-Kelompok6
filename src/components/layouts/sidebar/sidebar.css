@@ -1,7 +1,7 @@
 
 .nav {
   position: absolute;
-  width: 14%;
+  width: 13%;
   height: 100%;
   left: -2px;
   top: 0px;
@@ -16,32 +16,33 @@
 
 .me-auto {
   position: absolute;
-  width: 131px;
-  height: 35px;
-  top: 292px;
+  width: 100%;
+  top: 40%;
   color: #ffffff;
 
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  text-align: center;
-  font-size: 23px;
-  line-height: 34px;
+  line-height: 30%;
 
   /* identical to box height */
 }
 
-.you-auto {
-  position: absolute;
-  width: 84px;
-  height: 35px;
-  left: 69px;
-  top: 600px;
 
+.you-auto  {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  top: 80%;
+
+  
+}
+
+.menuBottom{
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 80%;
   line-height: 34px;
 
   /* identical to box height */
@@ -50,10 +51,10 @@
 }
 .Profile-admin {
   position: absolute;
-  width: 130px;
-  height: 130px;
-  left: 45px;
-  top: 45px;
+  width: 60%;
+  height: 60%;
+    left: 20%;
+    top: 10%;
 
   background: #ffffff;
   border-radius: 100%;
@@ -61,30 +62,55 @@
 
 .menu {
   color: #ffffff;
-  width: 200px;
+  width: 100%;
   transition: all 0.3s;
+  font-size: 80%;
+  margin-bottom: 10%;
+
 }
 
 #active {
   color: black;
   background-color: #ffffff;
-  width: 200px;
+  width: 100%;
   border-radius: 40px 0 0 10px;
-  padding-left: 30px;
+  padding:-5% 30px;
   margin-left: 20px;
+  position: relative;
+}
+
+#active::before {
+  content: '';
+  position: absolute;
+  color: black;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 40px 0 0 10px;
+  padding:-5% 30px;
+  margin-left: 20px;
+  z-index: -1;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .bgprof p {
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 38px;
-  left: 18px;
-  top: 194px;
+  left: 9%;
+  top: 75%;
 
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 100%;
   line-height: 38px;
 
   /* identical to box height */
@@ -94,7 +120,7 @@
 .bgprof {
   position: absolute;
   width: 100%;
-  height: 247px;
+  height: 30%;
   left: -2px;
   top: 0px;
 

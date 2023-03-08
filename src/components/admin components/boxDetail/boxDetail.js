@@ -78,31 +78,7 @@ const dataBalok = [
 const BoxDetail = () => {
     return (
         <div className="main-box">
-
-            <div className="judul"><p>Dashboard</p></div>
-            <div className="card">
-                <div className="produk">
-                    <p>Produk</p>
-                    <p>200</p>
-                </div>
-
-                <div className="expired">
-                    <p>expired</p>
-                    <p>10</p>
-                </div>
-
-                <div className="user">
-                    <p>user</p>
-                    <p>425</p>
-                </div>
-
-                <div className="income">
-                    <p>income</p>
-                    <p>1000000</p>
-                </div>
-            </div>
-
-            <div className="title"><p>Dashboard</p></div>
+            <div className="title"><h2>Dashboard</h2></div>
             <div className="card">
                 <div className="produk">
                     <p>Produk</p>
@@ -125,8 +101,6 @@ const BoxDetail = () => {
                     <p>1000000</p>
                 </div>
             </div>
-
-
             <div className="chart">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart width={2000} height={2000}>
