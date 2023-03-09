@@ -1,4 +1,56 @@
-.box {
-    width: 50%;
-    height: 100%;
+.idPesanan .box{
+    height: 554px;
+width: 430px;
+left: 515px;
+top: 121px;
+border-radius: 7px;
+background-color: #fdfdfd;
+box-shadow: 1px 1px 1px 1px;
+position: absolute;
+text-align: center;
 }
+
+.idPesanan .box h3{
+   font-weight: bold;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.idPesanan .box img{
+    width: 200px;
+    margin-left: -200px;
+    margin-top: 20px;
+   
+
+}
+.idPesanan .box h4{
+    text-align: left;
+    margin-left: 190px;
+    font-weight: bold;
+    margin-top: -130px;
+}
+.idPesanan .box h5{
+    margin-left: 190px;
+    font-weight: bold;
+    text-align: left;
+    
+
+    
+}
+.idPesanan .box p{
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 80px;
+    color: #000000;
+    font-size: large;
+    margin-bottom: 50px;
+}
+.idPesanan .box button{
+    background-color: #FF6B6B;
+    color: white;
+    width: 350px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+}
+

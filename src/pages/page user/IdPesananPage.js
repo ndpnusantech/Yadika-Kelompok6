@@ -1,9 +1,9 @@
-import idPesanan from "../../components/user components/id pesanan/idPesanan";
+import IdPesanan from "../../components/user components/id pesanan/idPesanan";
 
 const idPesananPage = () => {
     return (
       <div className="idPesanan">
-        <idPesanan />
+        < IdPesanan/>
       </div>
     );
   }
