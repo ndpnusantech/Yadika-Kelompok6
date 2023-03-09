@@ -1,0 +1,41 @@
+.listObat .card {
+    width: 225px;
+    padding: 17px;
+    box-shadow: 0px 4px 20px 0px #00000040;
+  }
+  .listObat .card img {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+  }
+  
+  .listObat .card h5 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .listObat .card h6 {
+    margin-right: 10px;
+  }
+  .listObat .card h6.normal {
+    text-decoration: line-through;
+    opacity: 50%;
+  }
+  
+  .listObat .card p {
+    font-size: 13px;
+    opacity: 50%;
+  }
+  
+  .listObat .card button {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #3da9fc;
+  }
+  
+  .listObat .card button:hover {
+    background-color: #3da9fc;
+    color: #fff;
+    transition: 0.3s;
+  }

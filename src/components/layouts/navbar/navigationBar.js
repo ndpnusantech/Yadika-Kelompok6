@@ -31,7 +31,7 @@ const NavigationBar = () => {
           <Link to="/riwayat" className="nav-link">
             Riwayat
           </Link>
-          <Link to="/pesanan" className="nav-link">
+          <Link to="/pesananSaya" className="nav-link">
             Pesanan Saya
           </Link>
           <Link to="/contact" className="nav-link">
@@ -39,14 +39,14 @@ const NavigationBar = () => {
           </Link>
         </Nav>
         <div className="profileUser">
-          <a href="/profile">
+          <Link to="/profile">
             <div className="profile">
               <img src={profile} width="40px" alt="" />
             </div>
             <div className="username">
               <h5>{dataStorage.username ? dataStorage.username : "Guest"}</h5>
             </div>
-          </a>
+          </Link>
         </div>
       </Container>
     </Navbar>
