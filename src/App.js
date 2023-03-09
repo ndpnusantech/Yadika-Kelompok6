@@ -11,7 +11,7 @@ import ProfileUser from "./pages/page user/profileUser";
 import ContactPage from "./pages/page user/contactPage";
 import DetailPage from "./pages/page user/detail";
 import PagePesananSaya from "./pages/page user/pesananSayaPage";
-
+import idPesananPage from "./pages/page user/idPesanan";
 
 
 
@@ -31,9 +31,11 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/detailObat" element={<DetailPage />} />
         <Route path="/pesanan" element={<PagePesananSaya />} />
+        <Route path="/idPesanan" element={<idPesananPage />} />
+
       </Routes>
     </BrowserRouter>
-  );
+  ); 
 }
 
 export default App;
