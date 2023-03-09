@@ -12,6 +12,8 @@ import ContactPage from "./pages/page user/contactPage";
 import DetailPage from "./pages/page user/detail";
 import PagePesananSaya from "./pages/page user/pesananSayaPage";
 import DiabetesPage from "./pages/page user/diabetes";
+import Popup from "./components/user components/popup/popup";
+import PageRincian from "./pages/page user/rincianPage";
 
 
 
@@ -33,6 +35,8 @@ function App() {
         <Route path="/detailObat" element={<DetailPage />} />
         <Route path="/pesanan" element={<PagePesananSaya />} />
         <Route path="/diabetes" element={<DiabetesPage />} />
+        <Route path="/rincianPesanan" element={<PageRincian />} />
+        <Route path="/p" element={<Popup />} />
       </Routes>
     </BrowserRouter>
   );

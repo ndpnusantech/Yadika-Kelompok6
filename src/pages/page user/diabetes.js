@@ -7,7 +7,7 @@ const Diabetespage = () => {
         <div className="diabetesPage">
             <NavigationBar />
             <Diabetes />
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }
