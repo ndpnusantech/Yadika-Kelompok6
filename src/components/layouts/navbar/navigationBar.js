@@ -31,7 +31,7 @@ const NavigationBar = () => {
           <Link to="/riwayat" className="nav-link">
             Riwayat
           </Link>
-          <Link to="/pesanan" className="nav-link">
+          <Link to="/pesananSaya" className="nav-link">
             Pesanan Saya
           </Link>
           <Link to="/contact" className="nav-link">

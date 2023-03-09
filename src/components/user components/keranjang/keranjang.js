@@ -6,6 +6,8 @@ const Keranjang = () => {
   const arrow = "/assets/Icon Sosial Media/arrow-right-circle 1.png";
   const viks = "/assets/obat/Vicks mini.png";
 
+  
+
   return (
     <div className="keranjang">
       <div className="back m-3">
@@ -21,7 +23,9 @@ const Keranjang = () => {
           <h1>Keranjang Anda</h1>
         </div>
         <div className="tambahProduct mt-2">
-          <button>Tambah Product</button>
+          <Link to="/obat">
+            <button>Tambah Product</button>
+          </Link>
         </div>
       </div>
       <div className="container-fluid d-flex justify-content-around">
