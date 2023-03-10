@@ -1,0 +1,37 @@
+.boxRincian {
+  border: 1px solid black;
+  margin-top: -20px;
+  border-radius: 35px;
+  height: auto;
+  padding-bottom: 25px;
+}
+
+.boxRincian .header {
+  flex-shrink: 0;
+  background-color: #094067;
+  border-radius: 35px 35px 0 0;
+  width: 100%;
+  padding: 27px;
+}
+
+.boxRincian .content {
+  padding: 25px;
+  width: 40%;
+}
+
+.boxRincian .content .listProduct {
+  width: 350px;
+  height: 250px;
+  padding: 5px;
+  overflow-y: scroll;
+  background-color: #f2f2f2;
+}
+.boxRincian .content .btnPesan {
+  width: 350px;
+}
+
+.boxRincian .rincianHarga {
+  padding: 25px;
+  /* margin-right: 100px; */
+  width: 40%;
+}
