@@ -12,6 +12,7 @@ import ContactPage from "./pages/page user/contactPage";
 import DetailPage from "./pages/page user/detail";
 import PagePesananSaya from "./pages/page user/pesananSayaPage";
 import IdPesananPage from "./pages/page user/IdPesananPage";
+import InputFilePage from "./pages/page user/inputFile";
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/detailObat" element={<DetailPage />} />
         <Route path="/pesanan" element={<PagePesananSaya />} />
         <Route path="/idPesanan" element={<IdPesananPage />} />
+        <Route path="/inputFile" element={<InputFilePage />} />
         
 
       </Routes>
