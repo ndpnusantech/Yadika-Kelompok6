@@ -1,0 +1,18 @@
+/* .IdPesanan {
+  width: 50%;
+} */
+.IdPesanan .card {
+  background-color: #fff;
+  width: 350px;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.IdPesanan .card .product {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.IdPesanan .card .idProduct {
+  padding-left: 30px;
+  padding-right: 30px;
+}

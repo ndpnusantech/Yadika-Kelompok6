@@ -6,15 +6,27 @@ const Keranjang = () => {
   const arrow = "/assets/Icon Sosial Media/arrow-right-circle 1.png";
   const viks = "/assets/obat/Vicks mini.png";
 
+  
+
   return (
     <div className="keranjang">
-      <div className="back m-4">
+      <div className="back m-3">
         <Link to="/obat">
           <img src={arrow} width="50px" />
         </Link>
       </div>
-      <div className="title mb-3" style={{ marginLeft: "110px" }}>
-        <h1>Keranjang Anda</h1>
+      <div
+        className="d-flex justify-content-between align-items-center"
+        style={{ width: "67%" }}
+      >
+        <div className="title mb-3" style={{ marginLeft: "110px" }}>
+          <h1>Keranjang Anda</h1>
+        </div>
+        <div className="tambahProduct mt-2">
+          <Link to="/obat">
+            <button>Tambah Product</button>
+          </Link>
+        </div>
       </div>
       <div className="container-fluid d-flex justify-content-around">
         <div className="tableKeranjang p-3">
@@ -36,7 +48,12 @@ const Keranjang = () => {
                 <span>5</span>
                 <button>+</button>
               </td>
-              <td>95.000</td>
+              <td>
+                19.100 <br />
+                <span className="opacity-50 text-decoration-line-through">
+                  32.600
+                </span>
+              </td>
             </tr>
           </Table>
         </div>
@@ -46,7 +63,7 @@ const Keranjang = () => {
           </div>
           <hr style={{ padding: "1px" }} />
           <div className="d-flex justify-content-between">
-            <p className="">Viks Formula...</p>
+            <p className="">Keranjang (5 Item)</p>
             <span className="">95.000</span>
           </div>
           <hr
@@ -56,12 +73,14 @@ const Keranjang = () => {
             }}
           />
           <p className="">Total Rp.95.000</p>
-          <button
-            className="btn btn-md w-100 mt-3"
-            style={{ backgroundColor: "#3da9fc" }}
-          >
-            Chekout
-          </button>
+          <Link to="/rincianPesanan">
+            <button
+              className="btn btn-md w-100 fw-semibold"
+              style={{ backgroundColor: "#3da9fc", color: "white" }}
+            >
+              Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>

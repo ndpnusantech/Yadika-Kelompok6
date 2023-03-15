@@ -35,9 +35,9 @@ const Detail = () => {
             Rp 19.100
           </p>
           <div className="Qty">
-            <button onClick={tambah}>+</button>
-            <span className="me-3 ms-3">{Qty}</span>
             <button onClick={kurang}>-</button>
+            <span className="me-3 ms-3">{Qty}</span>
+            <button onClick={tambah}>+</button>
           </div>
           <Link to="/keranjang" className="mt-5">
             <button
