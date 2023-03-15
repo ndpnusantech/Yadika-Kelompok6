@@ -8,10 +8,9 @@ const AdminRoute = () => {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/administrator" element={<LoginAdminPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/dataUsers" element={<DataUsers />} />
-                <Route path="/LoginAdmin" element={<LoginAdminPage />} />
-                
             </Routes>
         </BrowserRouter>
     )
