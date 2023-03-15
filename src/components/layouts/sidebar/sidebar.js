@@ -19,7 +19,7 @@ function Sidebar() {
 
 
     return (
-        <Navbar className="nav" >
+        <Navbar className="sidenavbar" >
             <Container>
               
                 <div className="bgprof">

@@ -1,13 +1,11 @@
 
-.nav {
+.sidenavbar {
   position: absolute;
   width: 14%;
   height: 100%;
-  left: -2px;
-  top: 0px;
+  background-color: #094067; 
 
-  background: #094067;
-  color: #ffffff;
+  top: 0;
 }
 .me-auto,
 .you-auto {
