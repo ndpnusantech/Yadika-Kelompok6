@@ -10,8 +10,6 @@ const PopupPengambilan = () => {
     const handleShow = () => setShow(true);
 
 
-
-
     return (
         <div className="popup mt-2">
             <Button
@@ -29,12 +27,12 @@ const PopupPengambilan = () => {
                 </Modal.Header>
                 <Modal.Body className="text-center justify-content-evenly d-flex pb-4 pt-4">
                     <a href="https://wa.me/088971755075">
-                    <Button
-                        className="fw-semibold"
-                        style={{ backgroundColor: "#3DA9FC" }}
-                    >
-                        Di antar
-                    </Button>
+                        <Button
+                            className="fw-semibold"
+                            style={{ backgroundColor: "#3DA9FC" }}
+                        >
+                            Di antar
+                        </Button>
                     </a>
                     <Link to="/idPesanan">
                         <Button

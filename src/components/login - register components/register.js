@@ -79,7 +79,7 @@ const Register = () => {
               <div className="d-flex align-items-center mb-3">
 
                 <Form.Label className="me-3 mt-1">Gender :</Form.Label>
-                <select name="gender" className="">
+                <select name="gender">
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </select>
