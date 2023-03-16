@@ -1,13 +1,12 @@
+
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Popup from "./components/user components/popup/popup";
 import AdminRoute from "./route/AdminRoute";
 import UserRoute from "./route/UserRoute";
 
-
-
-
 function App() {
   return (
+
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/" element={<LoginPage />} />

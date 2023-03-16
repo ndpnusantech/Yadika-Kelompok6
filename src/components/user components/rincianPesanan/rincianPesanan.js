@@ -1,22 +1,13 @@
 import { Container } from "react-bootstrap";
-import React, { useState } from "react";
-import Popup from "../popup/popup";
+import Popup from "./popup/popup";
+import { useState } from "react";
 import "./rincian.css";
+import PopupPengambilan from "./popup/popupPengambilan";
 
 const Rincian = () => {
-  const styleBtn = {
-    backgroundColor: "#094067",
-    fontSize: "14px",
-  };
-
-  const [title, setTitle] = useState("Silakan Pilih Metode Pembayaran");
-
-  const styleModal = {
-    marginTop: "100px",
-  };
-
-  const handleClickBtnKanan = () => {
-    setTitle("Silakan Pilih E-wallet");
+  const [metodePembayaran, setMetodePembayaran] = useState("-");
+  const handleCLickCash = () => {
+    setMetodePembayaran("Cash");
   };
 
   return (
@@ -67,12 +58,7 @@ const Rincian = () => {
               </div>
             </div>
             <div className="btnPesan mt-5">
-              <button
-                className="btn btn-md w-100 p-2 fs-5 text-white"
-                style={{ backgroundColor: "#094067" }}
-              >
-                Buat Pesanan
-              </button>
+              <PopupPengambilan />
             </div>
           </div>
           <div className="rincianHarga">
@@ -103,20 +89,11 @@ const Rincian = () => {
               <h6>
                 Metode Pembayaran :{" "}
                 <span>
-                  Dana <span className="opacity-50">( 08967542333 )</span>
+                  {metodePembayaran}
+                  {/* Dana <span className="opacity-50">( 08967542333 )</span> */}
                 </span>
               </h6>
-              {/* {recentModalContent} */}
-              <Popup
-                stylesBtn={styleBtn}
-                classBtn="w-50"
-                stylesModal={styleModal}
-                btnName="Pilih Metode Pembayaran"
-                title={title}
-                btnKiri="Cash"
-                btnKanan="E-wallet"
-                onclickBtnKanan={handleClickBtnKanan}
-              />
+              <Popup onclickCash={handleCLickCash} />
             </div>
           </div>
         </div>
