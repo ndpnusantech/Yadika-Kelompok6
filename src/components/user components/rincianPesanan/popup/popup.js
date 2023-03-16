@@ -2,7 +2,6 @@ import { Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import "./popup.css";
 import PopupTautkan from "./popupTautkan";
-import ContentPopup from "./contentPopop";
 
 const Popup = (props) => {
   const [show, setShow] = useState(false);
@@ -106,7 +105,6 @@ const Popup = (props) => {
         show={showPopup}
         onClose={handleClosePopup}
         title="Silakan tautkan akun anda"
-        content={<ContentPopup/>}
       />
     </div>
   );

@@ -87,11 +87,7 @@ const Rincian = () => {
             </table>
             <div className="metodePembayaran mt-5">
               <h6>
-                Metode Pembayaran :{" "}
-                <span>
-                  {metodePembayaran}
-                  {/* Dana <span className="opacity-50">( 08967542333 )</span> */}
-                </span>
+                Metode Pembayaran : <span>{metodePembayaran}</span>
               </h6>
               <Popup onclickCash={handleCLickCash} />
             </div>

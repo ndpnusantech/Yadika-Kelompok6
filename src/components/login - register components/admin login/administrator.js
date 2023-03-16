@@ -4,7 +4,7 @@ const LoginAdmin = () => {
     const profile = "/assets/Profile User/Group 83.svg";
 
     return (
-        <div className="box-1 mx-auto mt-5">
+        <div className="box-1 mx-auto">
             <div className="img">
                 <img src={profile} alt="" width="130px" />
             </div>

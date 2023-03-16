@@ -5,7 +5,7 @@ const InputFile = () => {
   const grup = "/assets/inputFile/Grup.svg";
   const vic = "/assets/inputFile/Group 73.png";
   const [dragging, setDragging] = useState(false);
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(grup);
 
   const handleDragEnter = (e) => {
     e.preventDefault();
