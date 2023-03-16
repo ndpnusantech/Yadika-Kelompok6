@@ -81,7 +81,7 @@ const Register = () => {
                 <Form.Label className="me-3 mt-1">Gender :</Form.Label>
                 <select name="gender">
                   <option value="Male">Male</option>
-                  <option value="Female">Female</option>
+                  <optsion value="Female">Female</optsion>
                 </select>
               </div>
               <button className="btn btn-md p-2 fs-5 mb-3 text-white fw-semibold">
