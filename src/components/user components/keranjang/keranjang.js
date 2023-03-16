@@ -1,12 +1,30 @@
 import "./keranjang.css";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Keranjang = () => {
   const arrow = "/assets/Icon Sosial Media/arrow-right-circle 1.png";
   const viks = "/assets/obat/Vicks mini.png";
 
-  
+  const [qty, setQty] = useState(0);
+  const [harga, setHarga] = useState(0);
+
+  const handleTambah = () => {
+    setQty(qty + 1);
+    setHarga(19100);
+    if (qty >= 1) {
+      setHarga(19100 * (qty + 1));
+    }
+  };
+  const handleKurang = () => {
+    if (qty < 1) {
+      setQty(0);
+    } else {
+      setQty(qty - 1);
+      setHarga(19100 * (qty - 1));
+    }
+  };
 
   return (
     <div className="keranjang">
@@ -44,9 +62,9 @@ const Keranjang = () => {
                 <div className="productName">Vicks Formula 44 Sirup 100 ml</div>
               </td>
               <td>
-                <button>-</button>
-                <span>5</span>
-                <button>+</button>
+                <button onClick={handleKurang}>-</button>
+                <span>{qty}</span>
+                <button onClick={handleTambah}>+</button>
               </td>
               <td>
                 19.100 <br />
@@ -63,8 +81,8 @@ const Keranjang = () => {
           </div>
           <hr style={{ padding: "1px" }} />
           <div className="d-flex justify-content-between">
-            <p className="">Keranjang (5 Item)</p>
-            <span className="">95.000</span>
+            <p className="">Keranjang ({qty} Item)</p>
+            <span className="">{harga.toLocaleString("id-ID")}</span>
           </div>
           <hr
             style={{
@@ -72,7 +90,7 @@ const Keranjang = () => {
               padding: "1px",
             }}
           />
-          <p className="">Total Rp.95.000</p>
+          <p className="">Total Rp.{harga}</p>
           <Link to="/rincianPesanan">
             <button
               className="btn btn-md w-100 fw-semibold"

@@ -4,16 +4,37 @@ import "./navigationBar.css";
 
 const NavigationBar = () => {
   const logo = "/assets/logo/logo.svg";
-  const profile = "/assets/Profile User/person-circle 1.png";
+  const photoGuest = "assets/Profile User/profile.png";
+  const male = "assets/Profile User/male.svg";
+  const female = "assets/Profile User/female.svg";
+
+  var user = JSON.parse(localStorage.getItem("user")) || {};
 
   const styleImage = {
     width: 50,
     marginRight: 7,
   };
 
+  const borderStyle = {
+    border: "1px solid black",
+    borderRadius: "50%",
+  };
+
   const dataStorage = localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
     : {};
+
+  const getProfilePicture = () => {
+    if (!user.username) {
+      return photoGuest;
+    } else {
+      if (user.gender == "Male") {
+        return male;
+      } else {
+        return female;
+      }
+    }
+  };
 
   return (
     <Navbar variant="light" className="p-3">
@@ -40,8 +61,8 @@ const NavigationBar = () => {
         </Nav>
         <div className="profileUser">
           <Link to="/profile">
-            <div className="profile">
-              <img src={profile} width="40px" alt="" />
+            <div className="profile" style={borderStyle}>
+              <img src={getProfilePicture()} width="40px" alt="" />
             </div>
             <div className="username">
               <h5>{dataStorage.username ? dataStorage.username : "Guest"}</h5>

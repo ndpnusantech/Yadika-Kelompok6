@@ -5,25 +5,30 @@ import ContentModalBody from "./modal";
 import Success from "../../success animation/success";
 
 const CardUser = () => {
-  const photo = "assets/Profile User/profile.png";
-  const backIcon = "assets/Icon Sosial Media/arrow-right-circle 1.png";
-
   const [success, setSuccess] = useState(false);
+
+  const photoGuest = "assets/Profile User/profile.png";
+  const male = "assets/Profile User/male.svg";
+  const female = "assets/Profile User/female.svg";
+
+  var user = JSON.parse(localStorage.getItem("user")) || {};
 
   const handleSave = (e) => {
     e.preventDefault();
     const newUsername = e.target.username.value;
     const newEmail = e.target.email.value;
     const newNoHp = e.target.noHp.value;
+    const newGender = e.target.gender.value;
     const addAge = e.target.age.value;
     const addBB = e.target.beratBadan.value;
     const addTB = e.target.tinggiBadan.value;
 
-    let user = JSON.parse(localStorage.getItem("user")) || {};
+    // let user = JSON.parse(localStorage.getItem("user")) || {};
 
     user.username = newUsername;
     user.email = newEmail;
     user.noHandphone = newNoHp;
+    user.gender = newGender;
     user.age = addAge;
     user.beratBadan = addBB;
     user.tinggiBadan = addTB;
@@ -42,8 +47,23 @@ const CardUser = () => {
 
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload();
+  };
   const handleShow = () => setShow(true);
+
+  const getProfilePicture = () => {
+    if (!user.username) {
+      return photoGuest;
+    } else {
+      if (user.gender == "Male") {
+        return male;
+      } else {
+        return female;
+      }
+    }
+  };
 
   return success ? (
     <Success success="Saved" />
@@ -51,7 +71,7 @@ const CardUser = () => {
     <div className="card mx-auto mt-2">
       <div className="profile text-center bg-primary p-4 text-white">
         <div className="photo rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto">
-          <img src={photo} alt="" width="120px" />
+          <img src={getProfilePicture()} alt="" width="100%" />
         </div>
         <div className="name mt-2">
           <h5 className="fw-semibold">

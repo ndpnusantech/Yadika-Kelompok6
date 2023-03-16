@@ -16,6 +16,7 @@ import PageSakitKepala from '../pages/page user/halObat/sakitKepalaPage';
 import IdPesananPage from '../pages/page user/IdPesananPage';
 import PageMasukAngin from '../pages/page user/halObat/masukAnginPage';
 import PageSakitGigi from '../pages/page user/halObat/sakitGigiPage';
+import InputFilePage from '../pages/page user/inputFile';
 
 
 const UserRoute = () => {
@@ -34,6 +35,7 @@ const UserRoute = () => {
                 <Route path="/pesananSaya" element={<PagePesananSaya />} />
                 <Route path="/idPesanan" element={<IdPesananPage />} />
                 <Route path="/rincianPesanan" element={<PageRincian />} />
+                <Route path="/inputFile" element={<InputFilePage />} />
                 <Route path="/diabetes" element={<PageDiabetes />} />
                 <Route path="/sakitMata" element={<PageSakitMata />} />
                 <Route path="/sakitKepala" element={<PageSakitKepala />} />

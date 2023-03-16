@@ -30,3 +30,11 @@
   margin: 50px auto;
   width: 420px;
 }
+
+.ChangeGender select {
+  background: transparent !important;
+  border: none;
+  padding: 2px;
+  width: 75px;
+  border-bottom: 2px solid black;
+}

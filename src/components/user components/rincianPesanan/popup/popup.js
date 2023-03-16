@@ -1,6 +1,7 @@
 import { Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import "./popup.css";
+import PopupTautkan from "./popupTautkan";
 
 const Popup = (props) => {
   const [show, setShow] = useState(false);
@@ -15,6 +16,18 @@ const Popup = (props) => {
   };
 
   const handlePopupClose2 = () => setShowPopup2(false);
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleOpenPopup = () => {
+    setShowPopup(true);
+    setShowPopup2(false);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup2(false);
+    setShowPopup(false);
+  };
 
   return (
     <div className="popup mt-2">
@@ -60,17 +73,39 @@ const Popup = (props) => {
         </Modal.Header>
         <Modal.Body>
           <div className="e-wallet d-flex align-items-center justify-content-evenly">
-            <img src="/assets/icon e-wallet/dana.svg" alt="" width="100px" />
-            <img src="/assets/icon e-wallet/ovo.svg" alt="" width="90px" />
-            <img src="/assets/icon e-wallet/gopay.svg" alt="" width="100px" />
+            <img
+              src="/assets/icon e-wallet/dana.svg"
+              alt=""
+              width="100px"
+              onClick={handleOpenPopup}
+            />
+            <img
+              src="/assets/icon e-wallet/ovo.svg"
+              alt=""
+              width="90px"
+              onClick={handleOpenPopup}
+            />
+            <img
+              src="/assets/icon e-wallet/gopay.svg"
+              alt=""
+              width="100px"
+              onClick={handleOpenPopup}
+            />
             <img
               src="/assets/icon e-wallet/shopeePay.svg"
               alt=""
               width="100px"
+              onClick={handleOpenPopup}
             />
           </div>
         </Modal.Body>
       </Modal>
+
+      <PopupTautkan
+        show={showPopup}
+        onClose={handleClosePopup}
+        title="Silakan tautkan akun anda"
+      />
     </div>
   );
 };

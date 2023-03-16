@@ -1,0 +1,78 @@
+.inputFile h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.inputFile img {
+  margin-left: 110px;
+  margin-top: -10px;
+  height: 450px;
+}
+
+.inputFile .box {
+  height: 400px;
+  width: 650px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px 1px;
+  float: right;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+.inputFile .box .btn-upload {
+  background-color: #094067;
+  color: white;
+  width: 250px;
+  height: 55px;
+  border-radius: 50px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 210px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inputFile .box .img-vic {
+  width: 140px;
+  height: 80px;
+  margin-left: 255px;
+  margin-top: 50px;
+}
+
+.inputFile .box .imageUpload {
+  width: 150px;
+  height: 140px;
+  margin-left: 255px;
+  margin-top: 35px;
+}
+
+.inputFile .box h4 {
+  text-align: center;
+  margin-top: 15px;
+  color: #828282;
+}
+
+.inputFile .box p {
+  text-align: center;
+  margin-top: 5px;
+  color: #828282;
+}
+
+.inputFile .custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 6px;
+}
+
+.InputFile .custom-file-upload input[type="file"] {
+  display: none;
+}

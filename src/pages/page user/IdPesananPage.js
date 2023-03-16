@@ -1,10 +1,14 @@
+import NavigationBar from "../../components/layouts/navbar/navigationBar";
 import IdPesanan from "../../components/user components/id pesanan/idPesanan";
 
 const IdPesananPage = () => {
   return (
-    <div className="idPesanan">
-      <IdPesanan />
-    </div>
+    <>
+      <NavigationBar />
+      <div className="idPesanan">
+        <IdPesanan />
+      </div>
+    </>
   );
 }
 
