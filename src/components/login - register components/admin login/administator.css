@@ -35,3 +35,18 @@
   margin-left: 40px;
   border-radius: 10px;
 }
+
+.box-1 input:focus {
+  outline-offset: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-1 input.valid {
+  outline-color: green;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-1 input.invalid {
+  outline-color: red;
+  transition: all 0.3s ease-in-out;
+}
