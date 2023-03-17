@@ -75,6 +75,8 @@ const dataBalok = [
 
 
 
+
+
 const BoxDetail = () => {
     return (
         <div className="main-box">

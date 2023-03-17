@@ -19,7 +19,9 @@ function Sidebar() {
 
 
     return (
-        <Navbar className="sidebar" >
+
+        <Navbar className="sidebar " >
+
             <Container>
 
                 <div className="bgprof">
@@ -29,7 +31,7 @@ function Sidebar() {
                 </div>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto linkSidebar">
+                    <Nav className="me-auto linkSidebar text-center pe-3">
                         <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
                             id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
                         <Link to="/storage" className="menu nav-link" onClick={() => setActiveLink('link2')}
@@ -39,7 +41,7 @@ function Sidebar() {
                         <Link to="/order" className="menu nav-link" onClick={() => setActiveLink('link4')}
                             id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
                     </Nav>
-                    <Nav className="you-auto ">
+                    <Nav className="you-auto text-center">
                         <Nav.Link className="menuBottom text-white" href="#deets">Setting</Nav.Link>
                         <Nav.Link className="menuBottom text-white" eventKey={2} href="/administrator">
                             Logout
