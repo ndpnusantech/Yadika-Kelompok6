@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom';
 function Sidebar() {
     const location = useLocation();
 
-    const profile = "/assets/Profile User/person-circle 1.svg";
+    const profile = "/assets/Profile User/profile.png";
 
     const [activeLink, setActiveLink] = useState();
 
@@ -21,7 +21,7 @@ function Sidebar() {
     return (
         <Navbar className="sidenavbar" >
             <Container>
-              
+
                 <div className="bgprof">
                     <img className="Profile-admin" src={profile} width="132px" alt="profile" />
                     <p>Fahmi Fahrizal</p>
@@ -29,15 +29,15 @@ function Sidebar() {
                 </div>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto Sidenav">
                         <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
-                             id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
+                            id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
                         <Link to="/storage" className="menu nav-link" onClick={() => setActiveLink('link2')}
-                             id={location.pathname === '/storage' ? 'active' : ''}>Storage</Link>
+                            id={location.pathname === '/storage' ? 'active' : ''}>Storage</Link>
                         <Link to="/dataUsers" className="menu nav-link" onClick={() => setActiveLink('link3')}
-                             id={location.pathname === '/dataUsers' ? 'active' : ''}>Data Users</Link>
+                            id={location.pathname === '/dataUsers' ? 'active' : ''}>Data Users</Link>
                         <Link to="/order" className="menu nav-link" onClick={() => setActiveLink('link4')}
-                             id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
+                            id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
                     </Nav>
                     <Nav className="you-auto">
                         <Nav.Link className="menuBottom" href="#deets">Setting</Nav.Link>
