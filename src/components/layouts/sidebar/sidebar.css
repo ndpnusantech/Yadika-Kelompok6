@@ -1,4 +1,3 @@
-
 .sidebar {
   position: absolute;
   width: 14%;
@@ -18,7 +17,6 @@
   position: absolute;
   width: 100%;
   top: 40%;
-  color: #fff !important;
 
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -29,7 +27,7 @@
 }
 
 .linkSidebar a {
-  color: #fff;
+  color: #fff !important;
 }
 
 .you-auto {
@@ -70,24 +68,24 @@
 }
 
 #active {
-  color: black;
+  color: black !important;
   background-color: #ffffff;
-  width: 100%;
+  width: 93%;
   border-radius: 40px 0 0 10px;
-  padding: -3% 30px;
-  margin-left: 20px;
+  padding: -3% 35px;
+  margin-left: 15px;
   position: relative;
 }
 
 #active::before {
   content: "";
   position: absolute;
-  color: black;
+  color: black !important;
   background-color: #ffffff;
   width: 100%;
   border-radius: 40px 0 0 10px;
-  padding: -3% 30px;
-  margin-left: 20px;
+  padding: -3% 35px;
+  margin-left: 15px;
   z-index: -1;
   opacity: 0;
   animation-name: fadeIn;

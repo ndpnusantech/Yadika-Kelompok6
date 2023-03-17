@@ -2,12 +2,12 @@ import Sidebar from "../../components/layouts/sidebar/sidebar";
 import TabelStorage from "../../components/admin components/Storage/TableStorage";
 
 
-const StorageR = () =>{
-    return(
+const StorageR = () => {
+    return (
         <div className="StorageRo">
-            <Sidebar/>
-            <TabelStorage/>
-    
+            <Sidebar />
+            <TabelStorage />
+
         </div>
     )
 }

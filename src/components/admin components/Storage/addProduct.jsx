@@ -1,54 +1,80 @@
 import { Modal, Button, Form } from "react-bootstrap";
+import { useState } from "react";
 
 const AddProductModal = (props) => {
-  const saveDataToLocalStorage = (data) => {
-    localStorage.setItem("products", JSON.stringify(data));
+  const [product, setProduct] = useState({
+    image: "",
+    productName: "",
+    category: "",
+    stock: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setProduct({ ...product, [name]: value });
   };
 
-  const handleSave = () => {
-    const image = document.querySelector('input[type="file"]').files[0];
-    const name = document.querySelector('input[type="text"]').value;
-    const category = document.querySelector('select').value;
-    const stock = document.querySelector('input[name="stock"]').value;
-  
-    const reader = new FileReader();
-    reader.onload = () => {
-      const data = { image: reader.result, name, category, stock };
-      saveDataToLocalStorage(data);
-      props.handleClose();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const file = e.target.file.files[0];
+    const newProduct = {
+      ...product,
+      image: URL.createObjectURL(file),
     };
-    reader.readAsDataURL(image);
+
+    let products = JSON.parse(localStorage.getItem("products")) || [];
+    products.push(newProduct);
+    localStorage.setItem("products", JSON.stringify(products));
+
+    // menghapus URL objek agar browser tidak memakan memory yang tidak perlu
+    URL.revokeObjectURL(newProduct.image);
+
+    props.handleClose();
+    alert("Product added successfully.");
+    window.location.reload();
   };
-  
+
   return (
     <Modal show={props.show} onHide={props.handleClose}>
       <Modal.Header closeButton>
         <Modal.Title className="title">Add Product</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Label>Image</Form.Label>
-          <Form.Control type="file" className="mb-2" />
+          <Form.Control type="file" className="mb-2" name="file" />
           <Form.Label>Product Name</Form.Label>
-          <Form.Control type="text" className="mb-2" />
+          <Form.Control
+            type="text"
+            className="mb-2"
+            name="productName"
+            value={product.productName}
+            onChange={handleInputChange}
+          />
           <Form.Label>Category</Form.Label>
-          <Form.Select className="mb-2">
+          <Form.Select
+            className="mb-2"
+            name="category"
+            value={product.category}
+            onChange={handleInputChange}
+          >
+            <option value="" disabled></option>
             <option value="Cair">Cair</option>
             <option value="Tablet">Tablet</option>
             <option value="Oles">Oles</option>
           </Form.Select>
           <Form.Label className="me-2">Stock :</Form.Label>
-          <input type="number" name="stock" />
+          <input
+            type="number"
+            name="stock"
+            value={product.stock}
+            onChange={handleInputChange}
+          />{" "}
+          <br /> <br />
+          <button className="btn btn-primary">Save Changes</button>
         </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={props.handleClose}>
-          Close
-        </Button>
-        <Button variant="primary" onClick={handleSave}>
-          Save Changes
-        </Button>
-      </Modal.Footer>
     </Modal>
   );
 };
