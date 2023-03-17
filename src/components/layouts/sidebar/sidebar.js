@@ -19,7 +19,9 @@ function Sidebar() {
 
 
     return (
+
         <Navbar className="sidebar" >
+
             <Container>
 
                 <div className="bgprof">

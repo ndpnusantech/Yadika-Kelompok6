@@ -1,3 +1,4 @@
+
 .sidebar {
   position: absolute;
   width: 14%;
@@ -7,6 +8,7 @@
   background: #094067 !important;
   color: #fff !important;
 }
+
 .sidebar .me-auto,
 .you-auto {
   display: block;
