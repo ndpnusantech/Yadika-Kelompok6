@@ -16,10 +16,15 @@ function TabelStorage() {
   }, []);
 
   const handleDelete = (index) => {
-    const filteredProducts = products.filter((p, i) => i !== index);
-    localStorage.setItem("products", JSON.stringify(filteredProducts));
-    setProducts(filteredProducts);
-    // alert("Product deleted successfully.");
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this product?"
+    );
+    if (confirmation) {
+      const filteredProducts = products.filter((p, i) => i !== index);
+      localStorage.setItem("products", JSON.stringify(filteredProducts));
+      setProducts(filteredProducts);
+      // alert("Product deleted successfully.");
+    }
   };
 
   const handleEdit = () => {
@@ -28,7 +33,7 @@ function TabelStorage() {
 
   return (
     <div className="mainBoxStorage">
-      <h1>Storage</h1>
+      <h1 className="mt-3 mb-3">Storage</h1>
       <div className="bg">
         <div className="Table-storage">
           {Array.isArray(products) && products.length > 0 ? (

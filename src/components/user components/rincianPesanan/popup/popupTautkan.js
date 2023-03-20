@@ -1,58 +1,53 @@
 import "./popup.css";
-import { useState } from "react";
 import { Form } from "react-bootstrap";
-import PopupBayar from "./popupBayar/popupBayar";
 
 const PopupTautkan = (props) => {
-    const { show, onClose, title } = props;
-    const [showPopupBayar, setShowPopupBayar] = useState(false);
+  const { show, onClose, title } = props;
 
-    const handleClose = () => {
-        onClose();
-    };
+  const handleClose = () => {
+    onClose();
+  };
 
-    const handleKonfirmasi = (event) => {
-        event.preventDefault();
-        setShowPopupBayar(true);
-    };
-
-    return (
-        <>
-            {showPopupBayar ? (
-                <PopupBayar
-                    show={showPopupBayar}
-                    onClose={() => setShowPopupBayar(false)}
-                    title="Pembayaran"
+  return (
+    <>
+      <div className={`center-popup ${show ? "show" : ""}`}>
+        <div className="popup-content">
+          <div className="popup-header">
+            <h4>{title}</h4>
+            <button className="close-button" onClick={handleClose}>
+              X
+            </button>
+          </div>
+          <div className="popup-body">
+            <div className="ContentPopup">
+              <div className="d-flex">
+                <img
+                  src="assets/icon e-wallet/qr-code.png"
+                  alt=""
+                  width="140px"
                 />
-            ) : (
-                <div className={`center-popup ${show ? "show" : ""}`}>
-                    <div className="popup-content">
-                        <div className="popup-header">
-                            <h3>{title}</h3>
-                            <button className="close-button" onClick={handleClose}>
-                                X
-                            </button>
-                        </div>
-                        <div className="popup-body">
-                            <div className="ContentPopup">
-                                <Form onSubmit={handleKonfirmasi}>
-                                    <Form.Label>Masukan akun Anda</Form.Label>
-                                    <Form.Control placeholder="08726715632" />
-
-                                    <button
-                                        className="mt-3 btn btn-md btn-primary"
-                                        type="submit"
-                                    >
-                                        Konfirmasi
-                                    </button>
-                                </Form>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <h6 className="mt-3">
+                    Silakan scan QR Code di samping untuk membayar
+                  </h6>
+                  <p>
+                    5 Items <br /> Total : 95,000
+                  </p>
                 </div>
-            )}
-        </>
-    );
+              </div>
+              <div className="inputFile mt-3 ms-4">
+                <h6>Silakan masukan bukti pembayaran</h6>
+                <input type="file" name="file" />
+              </div>
+              <div className="d-flex justify-content-end mt-3 me-4">
+                <button className="btn btn-md btn-primary">Konfirmasi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default PopupTautkan;

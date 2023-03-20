@@ -3,6 +3,7 @@ import { dataObat } from "../../../data/dataObat";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./semuaMacam.css";
+import { AnimationAOS } from "../../../AnimationAOS";
 
 const SemuaMacam = () => {
   const [limit, setLimit] = useState(8);
@@ -11,6 +12,8 @@ const SemuaMacam = () => {
     e.preventDefault();
     setLimit(limit + 8);
   };
+
+  AnimationAOS();
 
   return (
     <div className="Semua-Macam">
@@ -29,7 +32,7 @@ const SemuaMacam = () => {
         <div className="listObat d-flex flex-wrap justify-content-between align-items-center">
           {dataObat.slice(0, limit).map((data) => {
             return (
-              <div className="card mb-5">
+              <div className="card mb-5" data-aos="fade-down">
                 <center>
                   <Link to="/detailObat">
                     <img src={data.image} alt="" />
