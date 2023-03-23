@@ -1,45 +1,44 @@
-import { Modal, Button, Form } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Form, Modal } from "react-bootstrap";
 
-const AddProductModal = (props) => {
-  const [product, setProduct] = useState({
-    image: "",
-    productName: "",
-    jenis: "",
-    category: "",
-    stock: "",
-  });
+const EditProduct = (props) => {
+  const productId = props.productId;
+  const products = JSON.parse(localStorage.getItem("products"));
+  const productData = products.find((product) => product.id === productId);
+  const [product, setProduct] = useState(productData);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setProduct({ ...product, [name]: value });
+  useEffect(() => {
+    // load product data from localStorage when the modal is first shown
+    const products = JSON.parse(localStorage.getItem("products"));
+    const productToUpdate = products.find((p) => p.id === props.productId);
+    setProduct(productToUpdate);
+  }, [props.productId]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const products = JSON.parse(localStorage.getItem("products"));
+    const updatedProducts = products.map((p) => {
+      if (p.id === product.id) {
+        return { ...p, ...product };
+      }
+      return p;
+    });
+    localStorage.setItem("products", JSON.stringify(updatedProducts));
+    window.location.reload();
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const file = e.target.file.files[0];
-    const newProduct = {
-      ...product,
-      image: URL.createObjectURL(file),
-    };
-
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    products.push(newProduct);
-    localStorage.setItem("products", JSON.stringify(products));
-
-    // menghapus URL objek agar browser tidak memakan memory yang tidak perlu
-    URL.revokeObjectURL(newProduct.image);
-
-    props.handleClose();
-    alert("Product added successfully.");
-    window.location.reload();
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setProduct((prevProduct) => ({
+      ...prevProduct,
+      [name]: value,
+    }));
   };
 
   return (
     <Modal show={props.show} onHide={props.handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title className="title">Add Product</Modal.Title>
+        <Modal.Title>Edit Product</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
@@ -51,7 +50,7 @@ const AddProductModal = (props) => {
             className="mb-2"
             name="productName"
             required
-            value={product.productName}
+            value={product.productName || ""}
             onChange={handleInputChange}
           />
           <Form.Label>Jenis Obat</Form.Label>
@@ -59,7 +58,7 @@ const AddProductModal = (props) => {
             className="mb-2"
             name="jenis"
             required
-            value={product.jenis}
+            value={product.jenis || ""}
             onChange={handleInputChange}
           >
             <option value="" disabled></option>
@@ -70,9 +69,8 @@ const AddProductModal = (props) => {
           <Form.Label>Category Penyakit</Form.Label>
           <Form.Control
             type="text"
-            // placeholder="Category Obat"
             name="category"
-            value={product.category}
+            value={product.category || ""}
             className="mb-3"
             required
             onChange={handleInputChange}
@@ -84,7 +82,7 @@ const AddProductModal = (props) => {
             value={product.stock}
             required
             onChange={handleInputChange}
-          />{" "}
+          />
           <br /> <br />
           <button className="btn btn-primary">Save Changes</button>
         </Form>
@@ -93,4 +91,4 @@ const AddProductModal = (props) => {
   );
 };
 
-export default AddProductModal;
+export default EditProduct;
