@@ -2,10 +2,20 @@ import { Button, Table } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import AddProductModal from "./addProduct";
 import "./style.css";
+import EditProduct from "./editProduct";
 
 function TabelStorage() {
   const [products, setProducts] = useState([]);
   const [showAddProductModal, setShowAddProductModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+
+  const handleShowEditModal = () => {
+    setShowEditModal(true);
+  };
+
+  const handleCloseEditModal = () => {
+    setShowEditModal(false);
+  };
 
   const handleAddProductModalOpen = () => setShowAddProductModal(true);
   const handleAddProductModalClose = () => setShowAddProductModal(false);
@@ -16,10 +26,15 @@ function TabelStorage() {
   }, []);
 
   const handleDelete = (index) => {
-    const filteredProducts = products.filter((p, i) => i !== index);
-    localStorage.setItem("products", JSON.stringify(filteredProducts));
-    setProducts(filteredProducts);
-    // alert("Product deleted successfully.");
+    const confirmation = window.confirm(
+      "Are you sure you want to delete this product?"
+    );
+    if (confirmation) {
+      const filteredProducts = products.filter((p, i) => i !== index);
+      localStorage.setItem("products", JSON.stringify(filteredProducts));
+      setProducts(filteredProducts);
+      // alert("Product deleted successfully.");
+    }
   };
 
   const handleEdit = () => {
@@ -28,16 +43,28 @@ function TabelStorage() {
 
   return (
     <div className="mainBoxStorage">
-      <h1>Storage</h1>
+      <h1 className="mt-3 mb-3">Storage</h1>
       <div className="bg">
+        <div className="addProduct me-3 mb-3 d-flex justify-content-end">
+          <Button variant="primary" onClick={handleAddProductModalOpen}>
+            Add Product
+          </Button>
+        </div>
         <div className="Table-storage">
           {Array.isArray(products) && products.length > 0 ? (
-            <Table striped bordered hover>
+            <Table
+              striped
+              bordered
+              hover
+              variant="dark"
+              className="text-center"
+            >
               <thead>
                 <tr>
                   <th>Image</th>
                   <th>Product Name</th>
-                  <th>Category</th>
+                  <th>Jenis Obat</th>
+                  <th>Category Penyakit</th>
                   <th>Stock</th>
                   <th>Actions</th>
                 </tr>
@@ -49,13 +76,14 @@ function TabelStorage() {
                       <img src={product.image} alt="product" />
                     </td>
                     <td>{product.productName}</td>
+                    <td>{product.jenis}</td>
                     <td>{product.category}</td>
                     <td>{product.stock}</td>
                     <td>
                       <Button
                         variant="warning"
                         className="me-2"
-                        onClick={() => handleEdit(index)}
+                        onClick={handleShowEditModal}
                       >
                         Edit
                       </Button>
@@ -74,11 +102,6 @@ function TabelStorage() {
             <p>No products found.</p>
           )}
         </div>
-        <div className="addProduct">
-          <Button variant="primary" onClick={handleAddProductModalOpen}>
-            Add Product
-          </Button>
-        </div>
       </div>
       <AddProductModal
         show={showAddProductModal}
@@ -90,6 +113,8 @@ function TabelStorage() {
           alert("Product added successfully.");
         }}
       />
+
+      <EditProduct show={showEditModal} handleClose={handleCloseEditModal} />
     </div>
   );
 }

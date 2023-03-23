@@ -2,6 +2,7 @@ import "./administator.css";
 import { Form } from "react-bootstrap";
 import { useState } from 'react'
 import Success from "../../success animation/success";
+import { AnimationAOS } from "../../../AnimationAOS";
 
 const LoginAdmin = () => {
     const profile = "/assets/Profile User/Group 83.svg";
@@ -60,9 +61,11 @@ const LoginAdmin = () => {
         }
     }
 
+    AnimationAOS()
+
     return (
         success ? (<Success success="Success Login Admin" />) : (
-            <div className="box-1 mx-auto">
+            <div className="box-1 mx-auto" data-aos="zoom-in">
                 <div className="img">
                     <img src={profile} alt="" width="130px" />
                 </div>

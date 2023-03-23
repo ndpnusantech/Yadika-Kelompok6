@@ -1,4 +1,5 @@
 import { Container, Form } from "react-bootstrap";
+import { AnimationAOS } from "../../../AnimationAOS";
 import "./contact.css";
 
 const Contact = () => {
@@ -6,6 +7,8 @@ const Contact = () => {
   const telpon = "./assets/contact/telpon.svg";
   const gedung = "./assets/contact/gedung.svg";
   const jam = "./assets/contact/jam.svg";
+
+  AnimationAOS();
 
   return (
     <Container>
@@ -39,7 +42,7 @@ const Contact = () => {
           </button>
         </Form>
         <div className="box-1"></div>
-        <div className="box-2">
+        <div className="box-2" data-aos="fade-left">
           <h1 className="mt-5 mb-4 display-5 fw-semibold">Info</h1>
           <table>
             <tr>
@@ -68,7 +71,7 @@ const Contact = () => {
             </tr>
           </table>
         </div>
-        <div className="box-3"></div>
+        <div className="box-3" data-aos="zoom-in"></div>
       </div>
     </Container>
   );

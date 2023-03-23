@@ -104,7 +104,7 @@ const Popup = (props) => {
       <PopupTautkan
         show={showPopup}
         onClose={handleClosePopup}
-        title="Silakan tautkan akun anda"
+        title="Silakan lanjutkan pembayaran anda"
       />
     </div>
   );
