@@ -15,7 +15,6 @@ const LoginAdmin = () => {
             alert("Username dan password salah")
         }
     }
-    
 
     return (
         <div className="box-1 mx-auto mt-5">
