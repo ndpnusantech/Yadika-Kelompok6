@@ -1,0 +1,57 @@
+.mainBoxStorage {
+  width: 80%;
+  margin-left: 15%;
+  height: 600px;
+  margin-top: 3%;
+  /* background-color: blueviolet; */
+}
+
+.mainBoxStorage .Table-storage table img {
+  width: 90px;
+}
+
+.bgT {
+  width: 100%;
+  background-color: #094067;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.bgT h1 {
+  font-size: 150%;
+  padding: 2%;
+}
+
+.futah button {
+  float: right;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.futah {
+  position: fixed;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #094067;
+  width: 80%;
+  right: 5%;
+  padding: 1%;
+  bottom: 10%;
+}
+
+.jangSt thead,
+tbody {
+  border: 1px black;
+}
+.mainBoxStorage .jangSt {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.jangSt thead tr th,
+.jangSt tbody tr td {
+  border: black 2%;
+}
+
+.mainBoxStorage form {
+  padding: 2%;
+}

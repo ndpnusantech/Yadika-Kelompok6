@@ -3,6 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import React, { useState } from "react";
 import ContentModalBody from "./modal";
 import Success from "../../success animation/success";
+import { AnimationAOS } from "../../../AnimationAOS";
 
 const CardUser = () => {
   const [success, setSuccess] = useState(false);
@@ -65,10 +66,12 @@ const CardUser = () => {
     }
   };
 
+  AnimationAOS();
+
   return success ? (
     <Success success="Saved" />
   ) : (
-    <div className="card mx-auto mt-2">
+    <div className="card mx-auto mt-2" data-aos="zoom-in">
       <div className="profile text-center bg-primary p-4 text-white">
         <div className="photo rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto">
           <img src={getProfilePicture()} alt="" width="100%" />

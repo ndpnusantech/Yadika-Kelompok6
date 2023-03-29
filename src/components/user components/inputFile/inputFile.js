@@ -1,11 +1,12 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./input.css";
 
 const InputFile = () => {
   const grup = "/assets/inputFile/Grup.svg";
   const vic = "/assets/inputFile/Group 73.png";
   const [dragging, setDragging] = useState(false);
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState();
 
   const handleDragEnter = (e) => {
     e.preventDefault();
@@ -72,7 +73,7 @@ const InputFile = () => {
         onDrop={handleDrop}
         className="box"
         style={{
-          border: dragging ? "2px dashed #aaa" : "2px dashed #ccc",
+          border: dragging ? "3px dashed #aaa" : "3px dashed #ccc",
           fontSize: "1.2rem",
           color: dragging ? "#555" : "#aaa",
         }}
@@ -93,16 +94,18 @@ const InputFile = () => {
         </button>{" "}
         <br />
         {image ? (
-          <button
-            className="btn mt-4"
-            style={{
-              marginLeft: "280px",
-              backgroundColor: "#094067",
-              color: "#fff",
-            }}
-          >
-            Konfirmasi
-          </button>
+          <Link to="/rincianPesanan">
+            <button
+              className="btn mt-4"
+              style={{
+                marginLeft: "280px",
+                backgroundColor: "#094067",
+                color: "#fff",
+              }}
+            >
+              Konfirmasi
+            </button>
+          </Link>
         ) : (
           <>
             <h4>Or drop a file,</h4>
