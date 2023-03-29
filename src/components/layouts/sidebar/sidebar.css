@@ -5,7 +5,6 @@
   left: -2px;
   top: 0px;
   background: #094067 !important;
-  color: #fff !important;
 }
 
 .sidebar .me-auto,
@@ -128,4 +127,21 @@
 
   background: #00528c;
   border-radius: 0px 0px 20px 20px;
+}
+
+.dropdown{
+  background-color: #094067;
+}
+
+.dropdown{
+  margin: 5%;
+  color: black;
+}
+
+h6{
+  color: black !important;
+  width: 100%;
+}
+a{
+  text-decoration: none;
 }
