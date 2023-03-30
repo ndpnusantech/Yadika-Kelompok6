@@ -1,0 +1,21 @@
+.tabelOrder{
+    margin-left: 16rem;
+    text-align: center;
+    margin-right: 2rem;
+    border-radius: 10px;    
+}
+.tabelOrder h1{
+    text-align: left;
+}
+.tabelOrder button{
+    width: 120px;
+    height: 38px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+}
+.tabelOrder .hijau{
+    background-color: green !important;
+    color: white !important;
+    font-weight: bold;
+}

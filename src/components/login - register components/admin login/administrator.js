@@ -59,12 +59,9 @@ const LoginAdmin = () => {
                 window.open("/dashboard", "_self")
             }, 2000);
         }
-    }
-<<<<<<< HEAD
-=======
-
+    };
+    
     AnimationAOS()
->>>>>>> 915f29863dd1a50df2bded8c3080964f4ca1f7db
 
     return (
         success ? (<Success success="Success Login Admin" />) : (
