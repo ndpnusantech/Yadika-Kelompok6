@@ -5,6 +5,8 @@ import "./sidebar.css";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 
 
@@ -16,32 +18,92 @@ function Sidebar() {
 
     const [activeLink, setActiveLink] = useState();
 
+    const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+        <a
+            href=""
+            ref={ref}
+            onClick={(e) => {
+                e.preventDefault();
+                onClick(e);
+            }}
+        >
+            {children}
+            &#x25bc;
+        </a>
+    ));
+
+    // forwardRef again here!
+    // Dropdown needs access to the DOM of the Menu to measure it
+    const CustomMenu = React.forwardRef(
+        ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
+            const [value, setValue] = useState('');
+
+            return (
+                <div
+                    ref={ref}
+                    style={style}
+                    className={className}
+                    aria-labelledby={labeledBy}
+                >
+
+                    <ul className="list-unstyled">
+                        {React.Children.toArray(children).filter(
+                            (child) =>
+                                !value || child.props.children.toLowerCase().startsWith(value),
+                        )}
+                    </ul>
+                </div>
+            );
+        },
+    );
+
+
+
+
+
 
 
     return (
-        <Navbar className="sidenavbar" >
+
+        <Navbar className="sidebar " >
+
             <Container>
 
                 <div className="bgprof">
                     <img className="Profile-admin" src={profile} width="132px" alt="profile" />
-                    <p>Fahmi Fahrizal</p>
+                    <p className="ms-3">Fahmi Fahrizal</p>
 
                 </div>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto Sidenav">
+
+                    <Nav className="me-auto linkSidebar text-center pe-3">
                         <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
                             id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
-                        <Link to="/storage" className="menu nav-link" onClick={() => setActiveLink('link2')}
-                            id={location.pathname === '/storage' ? 'active' : ''}>Storage</Link>
+                        <div className='dropdown'>
+                            <Dropdown>
+                                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" >
+                                    Obat
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu as={CustomMenu}>
+                                    <Link to="/storage" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="1"><h6>Obat</h6></Link>
+                                    <Link to="#" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="2"><h6>Kategori Penyakit</h6></Link>
+                                    <Link to="#" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="3"><h6>Kategori Obat</h6></Link>
+
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            <br />
+                        </div>
+
                         <Link to="/dataUsers" className="menu nav-link" onClick={() => setActiveLink('link3')}
                             id={location.pathname === '/dataUsers' ? 'active' : ''}>Data Users</Link>
                         <Link to="/order" className="menu nav-link" onClick={() => setActiveLink('link4')}
                             id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
                     </Nav>
-                    <Nav className="you-auto">
-                        <Nav.Link className="menuBottom" href="#deets">Setting</Nav.Link>
-                        <Nav.Link className="menuBottom" eventKey={2} href="#memes">
+                    <Nav className="you-auto text-center">
+                        <Nav.Link className="menuBottom text-white" href="#deets">Setting</Nav.Link>
+                        <Nav.Link className="menuBottom text-white" eventKey={2} href="/administrator">
                             Logout
                         </Nav.Link>
                     </Nav>
@@ -49,7 +111,8 @@ function Sidebar() {
             </Container>
         </Navbar>
 
-    );
-}
 
+    );
+
+}
 export default Sidebar;

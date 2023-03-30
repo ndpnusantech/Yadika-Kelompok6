@@ -46,9 +46,16 @@ const ContentModalBody = (props) => {
           type="text"
           placeholder="Tinggi Badan"
           name="tinggiBadan"
-          className="mb-2"
+          className="mb-3"
           // value={data.tinggiBadan}
         />
+        <div className="ChangeGender">
+          <Form.Label className="me-2">Gender : </Form.Label>
+          <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
 
         <button className="btn btn-primary btn-md mt-5 mx-auto w-100">
           Save

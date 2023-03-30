@@ -1,16 +1,18 @@
-.sidenavbar {
+.sidebar {
   position: absolute;
   width: 14%;
   height: 100%;
-  background-color: #094067 !important;
-  top: 0;
+  left: -2px;
+  top: 0px;
+  background: #094067 !important;
 }
-.me-auto,
+
+.sidebar .me-auto,
 .you-auto {
   display: block;
 }
 
-.me-auto {
+.linkSidebar {
   position: absolute;
   width: 100%;
   top: 40%;
@@ -22,6 +24,10 @@
   line-height: 30%;
 
   /* identical to box height */
+}
+
+.linkSidebar a {
+  color: #fff !important;
 }
 
 .you-auto {
@@ -62,9 +68,9 @@
 }
 
 #active {
-  color: black;
+  color: black !important;
   background-color: #ffffff;
-  width: 100%;
+  width: 93%;
   border-radius: 40px 0 0 10px;
   padding: -5% 30px;
   margin-left: 20px;
@@ -74,12 +80,14 @@
 #active::before {
   content: "";
   position: absolute;
-  color: black;
+  color: black !important;
   background-color: #ffffff;
   width: 100%;
   border-radius: 40px 0 0 10px;
+
   padding: -5% 30px;
   margin-left: 20px;
+
   z-index: -1;
   opacity: 0;
   animation-name: fadeIn;
@@ -122,4 +130,21 @@
 
   background: #00528c;
   border-radius: 0px 0px 20px 20px;
+}
+
+.dropdown {
+  background-color: #094067;
+}
+
+.dropdown {
+  margin: 5%;
+  color: black;
+}
+
+h6 {
+  color: black !important;
+  width: 100%;
+}
+a {
+  text-decoration: none;
 }
