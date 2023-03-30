@@ -5,7 +5,7 @@ const EditProduct = (props) => {
   const productId = props.productId;
   const products = JSON.parse(localStorage.getItem("products"));
   const productData = products.find((product) => product.id === productId);
-  const [product, setProduct] = useState(productData);
+  const [product, setProduct] = useState(productData || {});
 
   useEffect(() => {
     // load product data from localStorage when the modal is first shown
@@ -50,7 +50,7 @@ const EditProduct = (props) => {
             className="mb-2"
             name="productName"
             required
-            value={product.productName || ""}
+            value={product ? product.productName || "" : ""}
             onChange={handleInputChange}
           />
           <Form.Label>Jenis Obat</Form.Label>
@@ -58,7 +58,7 @@ const EditProduct = (props) => {
             className="mb-2"
             name="jenis"
             required
-            value={product.jenis || ""}
+            value={product ? product.jenis || "" : ""}
             onChange={handleInputChange}
           >
             <option value="" disabled></option>
@@ -70,7 +70,7 @@ const EditProduct = (props) => {
           <Form.Control
             type="text"
             name="category"
-            value={product.category || ""}
+            value={product ? product.category || "" : ""}
             className="mb-3"
             required
             onChange={handleInputChange}
@@ -79,7 +79,7 @@ const EditProduct = (props) => {
           <input
             type="number"
             name="stock"
-            value={product.stock}
+            value={product ? product.stock || "" : ""}
             required
             onChange={handleInputChange}
           />

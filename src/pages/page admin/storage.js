@@ -2,7 +2,7 @@ import Sidebar from "../../components/layouts/sidebar/sidebar";
 import TabelStorage from "../../components/admin components/Storage/TableStorage";
 
 
-const StorageR = () => {
+const StorageP = () => {
     return (
         <div className="StorageRo">
             <Sidebar />
@@ -12,4 +12,4 @@ const StorageR = () => {
     )
 }
 
-export default StorageR
+export default StorageP
