@@ -1,7 +1,13 @@
 import "./riwayat.css";
-import { Table, Container } from "react-bootstrap";
+import { Table, Container, Button } from "react-bootstrap";
+import PopupIdPesanan from "../rincianPesanan/popup/popupIdPesanan";
+import React, { useState } from "react";
 
 const Riwayat = () => {
+  const [modalId, setModalId] = useState(false);
+
+  const onHide = () => setModalId(false);
+
   return (
     <Container>
       <div className="riwayatPembelian">
@@ -21,16 +27,29 @@ const Riwayat = () => {
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Vicks Formula 44 Sirup 100 ml</td>
-              <td>4</td>
-              <td>95.500</td>
-              <td>Ovo</td>
-              <td>320483602710924</td>
+              <td className="align-middle">1</td>
+              <td className="align-middle">Vicks Formula 44 Sirup 100 ml</td>
+              <td className="align-middle">4</td>
+              <td className="align-middle">95.500</td>
+              <td className="align-middle">Ovo</td>
+              <td className="align-middle">
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={() => setModalId(true)}
+                >
+                  View ID Pesanan
+                </button>
+              </td>
             </tr>
           </tbody>
         </Table>
       </div>
+
+      <PopupIdPesanan
+        show={modalId}
+        onHide={onHide}
+        footer={<Button onClick={onHide}>Close</Button>}
+      />
     </Container>
   );
 };

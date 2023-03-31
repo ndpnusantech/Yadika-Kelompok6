@@ -1,7 +1,7 @@
 import { Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import "./popup.css";
-import PopupTautkan from "./popupTautkan";
+import PopupBayar from "./popupBayar";
 
 const Popup = (props) => {
   const [show, setShow] = useState(false);
@@ -101,7 +101,7 @@ const Popup = (props) => {
         </Modal.Body>
       </Modal>
 
-      <PopupTautkan
+      <PopupBayar
         show={showPopup}
         onClose={handleClosePopup}
         title="Silakan lanjutkan pembayaran anda"

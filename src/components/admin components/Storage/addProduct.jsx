@@ -68,15 +68,21 @@ const AddProductModal = (props) => {
             <option value="Oles">Oles</option>
           </Form.Select>
           <Form.Label>Category Penyakit</Form.Label>
-          <Form.Control
-            type="text"
-            // placeholder="Category Obat"
+          <Form.Select
             name="category"
             value={product.category}
             className="mb-3"
             required
             onChange={handleInputChange}
-          />
+          >
+            <option value="" disabled></option>
+            <option value="Demam">Demam</option>
+            <option value="Sakit Kepala">Sakit Kepala</option>
+            <option value="Asma">Asma</option>
+            <option value="Sakit Perut">Sakit Perut</option>
+            <option value="Sakit Gigi">Sakit Gigi</option>
+            <option value="Diare">Diare</option>
+          </Form.Select>
           <Form.Label className="me-2">Stock :</Form.Label>
           <input
             type="number"

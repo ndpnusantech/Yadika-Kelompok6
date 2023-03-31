@@ -1,10 +1,20 @@
 import "./popup.css";
-import { Form } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import PopupIdPesanan from "./popupIdPesanan";
 
-const PopupTautkan = (props) => {
+const PopupBayar = (props) => {
   const { show, onClose, title } = props;
+  const [modalId, setModalId] = useState(false);
+
+  // const onShow = () => setModal(true)
+  const onHide = () => {
+    alert("saved");
+    setModalId(false);
+  };
 
   const handleClose = () => {
+    setModalId(true);
     onClose();
   };
 
@@ -40,14 +50,24 @@ const PopupTautkan = (props) => {
                 <input type="file" name="file" />
               </div>
               <div className="d-flex justify-content-end mt-3 me-4">
-                <button className="btn btn-md btn-primary">Konfirmasi</button>
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={() => handleClose()}
+                >
+                  Konfirmasi
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <PopupIdPesanan
+        show={modalId}
+        onHide={() => setModalId(false)}
+        footer={<Button onClick={onHide}>Save</Button>}
+      />
     </>
   );
 };
 
-export default PopupTautkan;
+export default PopupBayar;

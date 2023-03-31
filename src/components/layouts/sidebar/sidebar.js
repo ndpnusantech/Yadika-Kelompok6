@@ -88,7 +88,7 @@ function Sidebar() {
 
                                 <Dropdown.Menu as={CustomMenu}>
                                     <Link to="/storage" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="1"><h6>Obat</h6></Link>
-                                    <Link to="#" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="2"><h6>Kategori Penyakit</h6></Link>
+                                    <Link to="/adminobatkategori" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="2"><h6>Kategori Penyakit</h6></Link>
                                     <Link to="#" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="3"><h6>Kategori Obat</h6></Link>
 
                                 </Dropdown.Menu>
