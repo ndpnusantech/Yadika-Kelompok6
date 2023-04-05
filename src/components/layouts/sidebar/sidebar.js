@@ -1,118 +1,88 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./sidebar.css";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-import { useLocation } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
 
+const Sidebar = () => {
+  return (
+    <div className="sidebar d-flex flex-column align-items-center text-light">
+      <div
+        className="header d-flex flex-wrap justify-content-center"
+        style={{
+          backgroundColor: "#00528C",
+          height: "220px",
+          width: "100%",
+          borderRadius: "0 0 25px 25px",
+        }}
+      >
+        <div className="d-flex flex-column mt-4 d-flex align-items-center">
+          <span className="profile rounded-circle p-2 mb-3 ">
+            <img src="assets/Profile User/profile.png" alt="" width="100px" />
+          </span>
+          <h4>Fahmi Fahrizal</h4>
+        </div>
+      </div>
 
-
-
-
-function Sidebar() {
-    const location = useLocation();
-
-    const profile = "/assets/Profile User/profile.png";
-
-    const [activeLink, setActiveLink] = useState();
-
-    const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
-        <a
-            href=""
-            ref={ref}
-            onClick={(e) => {
-                e.preventDefault();
-                onClick(e);
-            }}
+      <div className="menu d-flex flex-column flex-wrap text-center mt-4 w-100">
+        <Link
+          to="/dashboard"
+          className={`fs-5 text-decoration-none text-white fw-semibold mb-2 ${
+            window.location.pathname === "/dashboard" ? "active-link" : ""
+          }`}
         >
-            {children}
-            &#x25bc;
-        </a>
-    ));
+          Dashboard
+        </Link>
+        <div className="submenu d-flex justify-content-center mb-2">
+          <Dropdown>
+            <Dropdown.Toggle
+              id="dropdown-basic"
+              style={{ backgroundColor: "transparent", border: "none" }}
+              className="fw-semibold fs-5"
+            >
+              Obat
+            </Dropdown.Toggle>
 
-    // forwardRef again here!
-    // Dropdown needs access to the DOM of the Menu to measure it
-    const CustomMenu = React.forwardRef(
-        ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-            const [value, setValue] = useState('');
+            <Dropdown.Menu>
+              <Dropdown.Item href="/storage">Obat</Dropdown.Item>
+              <Dropdown.Item href="/adminobatkategori">
+                Kategori Penyakit
+              </Dropdown.Item>
+              <Dropdown.Item href="#coming">Kategori Obat</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+        <Link
+          to="/order"
+          className={`fs-5 text-decoration-none text-white fw-semibold mb-2 ${
+            window.location.pathname === "/order" ? "active-link" : ""
+          }`}
+        >
+          Order
+        </Link>
+        <Link
+          to="/dataUsers"
+          className={`fs-5 text-decoration-none text-white fw-semibold ${
+            window.location.pathname === "/dataUsers" ? "active-link" : ""
+          }`}
+        >
+          Data Users
+        </Link>
+      </div>
+      <div className="extramenu d-flex flex-column  position-absolute">
+        <Link
+          to="/dashboard"
+          className="fs-5 text-decoration-none text-white fw-semibold"
+        >
+          Setting
+        </Link>
+        <Link
+          to="/dashboard"
+          className="fs-5 text-decoration-none text-white fw-semibold"
+        >
+          Logout
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-            return (
-                <div
-                    ref={ref}
-                    style={style}
-                    className={className}
-                    aria-labelledby={labeledBy}
-                >
-
-                    <ul className="list-unstyled">
-                        {React.Children.toArray(children).filter(
-                            (child) =>
-                                !value || child.props.children.toLowerCase().startsWith(value),
-                        )}
-                    </ul>
-                </div>
-            );
-        },
-    );
-
-
-
-
-
-
-
-    return (
-
-        <Navbar className="sidebar " >
-
-            <Container>
-
-                <div className="bgprof">
-                    <img className="Profile-admin" src={profile} width="132px" alt="profile" />
-                    <p className="ms-3">Fahmi Fahrizal</p>
-
-                </div>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-
-                    <Nav className="me-auto linkSidebar text-center pe-3">
-                        <Link to="/dashboard" className="menu nav-link" onClick={() => setActiveLink('link1')}
-                            id={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
-                        <div className='dropdown'>
-                            <Dropdown>
-                                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" >
-                                    Obat
-                                </Dropdown.Toggle>
-
-                                <Dropdown.Menu as={CustomMenu}>
-                                    <Link to="/storage" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="1"><h6>Obat</h6></Link>
-                                    <Link to="/adminobatkategori" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="2"><h6>Kategori Penyakit</h6></Link>
-                                    <Link to="#" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item text-dark" eventKey="3"><h6>Kategori Obat</h6></Link>
-
-                                </Dropdown.Menu>
-                            </Dropdown>
-                            <br />
-                        </div>
-
-                        <Link to="/dataUsers" className="menu nav-link" onClick={() => setActiveLink('link3')}
-                            id={location.pathname === '/dataUsers' ? 'active' : ''}>Data Users</Link>
-                        <Link to="/order" className="menu nav-link" onClick={() => setActiveLink('link4')}
-                            id={location.pathname === '/order' ? 'active' : ''}>Order</Link>
-                    </Nav>
-                    <Nav className="you-auto text-center">
-                        <Nav.Link className="menuBottom text-white" href="#deets">Setting</Nav.Link>
-                        <Nav.Link className="menuBottom text-white" eventKey={2} href="/administrator">
-                            Logout
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-
-
-    );
-
-}
 export default Sidebar;
