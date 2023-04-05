@@ -1,449 +1,124 @@
-
-import React, { useState } from 'react';
-import './style.css';
+import "./style.css";
 import Table from 'react-bootstrap/Table';
-
-function CollapsibleSection() {
-  const [openSection, setOpenSection] = useState(null);
-
-  const handleToggle = (section) => {
-    setOpenSection((prevOpenSection) => {
-      if (prevOpenSection === section) {
-        return null; // close the section if it is already open
-      } else {
-        return section; // open the clicked section
-      }
-    });
-  };
-
-  return (
-    <div className='bodyCat'>
-      <h2>Kategori Obat</h2>
-      <div className="MainCatob">
-        <h1 onClick={() => handleToggle('masukAngin')}>
-          {openSection === 'masukAngin' ? 'Masuk Angin' : 'Masuk Angin'}
-        </h1>
-        {openSection === 'masukAngin' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
 
-              </tbody>
-            </Table>
-          </div>
-        )}
+const KatPenya = () => {
+  const [show, setShow] = useState(false);
+  const [showedit, setShowedit] = useState(false);      
 
-        <h1 onClick={() => handleToggle('sakitGigi')}>
-          {openSection === 'sakitGigi' ? 'Sakit Gigi' : 'Sakit Gigi'}
-        </h1>
-        {openSection === 'sakitGigi' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
+  const handleClosedit = () => setShowedit(false);
+  const handleShowdit = () => setShowedit(true);
+  
 
 
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('BatukPilek')}>
-          {openSection === 'BatukPilek' ? 'Batuk & Pilek' : 'Batuk & Pilek'}
-        </h1>
-        {openSection === 'BatukPilek' && (
-          <div>
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
+  return(
+    <>
+    <div className="mainkatpen">
+      <h2>Kategori Penyakit</h2> 
+      <a className="addcateg" onClick={handleShow}>Add Category</a>
+      <div className="tablekatpen">
+      <Table striped bordered hover variant="dark" >
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Kategori</th>
+          <th></th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td colSpan={2}>Masuk Angin</td>
+          <td><a className="delcattab"  >Delete</a>  </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td colSpan={2}>Sakit Gigi</td>
+          <td><a className="delcattab"  >Delete</a>  </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td colSpan={2}>Batuk & Pilek</td>
+          <td><a className="delcattab"  >Delete</a>  </td>
+        </tr>
+        
+       {/* <a className=" editcattab"onClick={handleShowdit} >Edit</a> */}
 
+      </tbody>
+    </Table>
+    <div className="modal">
+    <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Add Category</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Nama Kategori</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder=""
+                autoFocus
+              />
+            </Form.Group>
+            
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('demam')}>
-          {openSection === 'demam' ? 'Demam' : 'Demam'}
-        </h1>
-        {openSection === 'demam' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('sakitmata')}>
-          {openSection === 'sakitmata' ? 'Sakit Mata' : 'Sakit Mata'}
-        </h1>
-        {openSection === 'sakitmata' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('sariawan')}>
-          {openSection === 'sariawan' ? 'sariawan' : 'sariawan'}
-        </h1>
-        {openSection === 'sariawan' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('alergi')}>
-          {openSection === 'alergi' ? 'alergi' : 'alergi'}
-        </h1>
-        {openSection === 'alergi' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('cacar')}>
-          {openSection === 'cacar' ? 'cacar' : 'cacar'}
-        </h1>
-        {openSection === 'cacar' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('asma')}>
-          {openSection === 'asma' ? 'asma' : 'asma'}
-        </h1>
-        {openSection === 'asma' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('p3k')}>
-          {openSection === 'p3k' ? 'p3k' : 'p3k'}
-        </h1>
-        {openSection === 'p3k' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('antiseptik')}>
-          {openSection === 'antiseptik' ? 'antiseptik' : 'antiseptik'}
-        </h1>
-        {openSection === 'antiseptik' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('diabetes')}>
-          {openSection === 'diabetes' ? 'diabetes' : 'diabetes'}
-        </h1>
-        {openSection === 'diabetes' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-        <h1 onClick={() => handleToggle('sakitkepala')}>
-          {openSection === 'sakitkepala' ? 'sakit kepala' : 'sakit kepala'}
-        </h1>
-        {openSection === 'sakitkepala' && (
-          <div>
-
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>image</th>
-                  <th>product name</th>
-                  <th>jenis obat</th>
-                  <th>kategori penyakit</th>
-                  <th>stock</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/obat/Eye auto drop 1.png" alt="" /></td>
-                  <td>eye auto drop</td>
-                  <td>cair</td>
-                  <td>sakit mata</td>
-                  <td>10</td>
-                </tr>
-
-
-              </tbody>
-            </Table>
-          </div>
-        )}
-
-
+      <Modal show={showedit} onHide={handleClosedit}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Example textarea</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClosedit}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClosedit}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      </div>
       </div>
     </div>
-  );
+    </>
+  )
 }
 
-export default CollapsibleSection;
-
-
+export default KatPenya;

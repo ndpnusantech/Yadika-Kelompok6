@@ -67,24 +67,6 @@ const Detail = () => {
             tahun ke atas : 2 sendok takar (10ml) Anak-anak : 6-12 tahun : 1
             sendok takar (5ml) atau gunakan sesuai petunjuk dokter
           </p>
-          <h4>Dekripsi</h4>
-          <p>
-            VICKS FORMULA 44 SIRUP merupakan Sirup Obat Batuk dengan kombinasi
-            formula Dextromethorphan HBr dan Doxylamine Succinate untuk
-            meringankan batuk yang tidak berdahak disertai bersin-bersin/
-            alergi.
-          </p>
-          <h4>Komposisi</h4>
-          <p>
-            setiap 5ml mengandung: Dextromethrophan Hydrobromide 5mg Doxylamine
-            Succinate 2mg
-          </p>
-          <h4>Dosis</h4>
-          <p>
-            Gunakan setiap 4 jam sesuai kebutuhan, sampai 6x sehari. Dewasa : 12
-            tahun ke atas : 2 sendok takar (10ml) Anak-anak : 6-12 tahun : 1
-            sendok takar (5ml) atau gunakan sesuai petunjuk dokter
-          </p>
           <h4>Aturan Pakai</h4>
           <p>Sesudah makan</p>
           <h4>Kontra Indikasi</h4>
