@@ -13,7 +13,7 @@
     padding: 1%;
 }
 
-.mainkatpen a{
+.mainkatpen .addcateg{
     float: right;
 }
 
@@ -24,6 +24,7 @@
     background-color: #0e5e97;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .tablekatpen a{
@@ -35,10 +36,13 @@
     background-color: #0bac00;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .delcattab{
     background-color: #ac0000;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
+
