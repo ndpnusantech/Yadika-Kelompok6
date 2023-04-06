@@ -4,6 +4,7 @@ import Dashboard from '../pages/page admin/dashboard'
 import DataUsers from "../pages/page admin/dataUserPage";
 import StorageP from '../pages/page admin/storage';
 import OrderPage from '../pages/page admin/order';
+import KategoriPage from '../pages/page admin/kategori';
 
 
 const AdminRoute = () => {
@@ -15,6 +16,7 @@ const AdminRoute = () => {
                 <Route path="/dataUsers" element={<DataUsers />} />
                 <Route path="/storage" element={<StorageP />} />
                 <Route path="/order" element={<OrderPage />} />
+                <Route path="/kategoriObat" element={<KategoriPage />} />
             </Routes>
         </BrowserRouter>
     )

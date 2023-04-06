@@ -1,0 +1,26 @@
+.katObat h2{
+    text-align: left;
+    color: #23415E;
+    margin-left: 250px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.katObat .katImg{
+    margin-left: 180px;
+}
+.katObat .img {
+    width: 100px;
+    border-radius: 20px;
+    margin-left: 90px;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 20px;
+}
+
+.katObat .img h4 {
+    color: #23415E;
+    text-align: center;
+    display: flex;
+}
