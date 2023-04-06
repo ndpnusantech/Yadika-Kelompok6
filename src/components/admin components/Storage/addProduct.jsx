@@ -74,7 +74,7 @@ const AddProductModal = (props) => {
                   style={{ border: "1px solid black", borderRadius: "5px" }}
                   className="mb-2"
                 />
-                <Form.Label>Golongan Product</Form.Label>
+                <Form.Label className="me-2">Golongan Product :</Form.Label>
                 <select
                   name="Golongan"
                   style={{ width: "140px" }}

@@ -20,3 +20,7 @@
   font-weight: bold;
   cursor: default;
 }
+.tabelOrder .merah {
+  background-color: rgb(227, 54, 54) !important;
+  color: white;
+}

@@ -5,7 +5,7 @@ const Order = () => {
   return (
     <div className='tabelOrder'>
       <h1 className='mt-5 mb-5'> <b>Order</b></h1>
-      <Table striped bordered hover>
+      <Table striped bordered hover variant='dark'>
         <thead>
           <tr>
             <th>No</th>
@@ -25,7 +25,10 @@ const Order = () => {
             <td>OVO</td>
             <td>320483602710924</td>
             <td>Rp. 76.400</td>
-            <td><button className="btn btn-md btn-primary">Accept</button></td>
+            <td>
+              <button className="btn btn-md btn-primary me-2">Accept</button>
+              <button className="btn btn-md btn-danger">Reject</button>
+            </td>
           </tr>
           <tr>
             <td>2</td>
@@ -34,7 +37,10 @@ const Order = () => {
             <td>OVO</td>
             <td>320483602710924</td>
             <td>Rp. 76.400</td>
-            <td><button className='hijau disabled'>Accepted</button></td>
+            <td>
+              <button className="btn btn-md btn-primary me-2">Accept</button>
+              <button className="btn btn-md btn-danger">Reject</button>
+            </td>
 
           </tr>
           <tr>
@@ -44,7 +50,10 @@ const Order = () => {
             <td>OVO</td>
             <td>320483602710924</td>
             <td>Rp. 76.400</td>
-            <td><button className="btn btn-md btn-primary">Accept</button></td>
+            <td>
+              <button className="btn btn-md btn-primary me-2">Accept</button>
+              <button className="btn btn-md btn-danger">Reject</button>
+            </td>
           </tr>
           <tr>
             <td>4</td>
@@ -63,7 +72,7 @@ const Order = () => {
             <td>OVO</td>
             <td>320483602710924</td>
             <td>Rp. 76.400</td>
-            <td><button className="btn btn-md btn-primary">Accept</button></td>
+            <td><button className="merah disabled cur">Rejected</button></td>
           </tr>
           <tr>
             <td>6</td>
@@ -72,7 +81,7 @@ const Order = () => {
             <td>OVO</td>
             <td>320483602710924</td>
             <td>Rp. 76.400</td>
-            <td><button className='hijau disabled cur'>Accepted</button></td>
+            <td><button className='merah disabled cur'>Rejected</button></td>
           </tr>
         </tbody>
       </Table>
