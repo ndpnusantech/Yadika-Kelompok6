@@ -1,48 +1,44 @@
-.mainkatpen{
-    margin-left: 17%;
-    margin-top: 2%;
-    width: 80%;
-    background-color: #094067;
-    overflow: scroll;
-    border-radius: 15px;
+.mainkatpen {
+  margin-left: 20%;
+  margin-top: 2%;
+  width: 78%;
+  padding: 10px;
+  background-color: #094067;
+  overflow-y: scroll;
+  border-radius: 15px;
 }
 
-.mainkatpen h2{
-    color: white;
-    font-weight: bold;
-    padding: 1%;
+.mainkatpen h2 {
+  color: white;
+  font-weight: bold;
+  padding: 1%;
 }
 
-.mainkatpen .addcateg{
-    float: right;
+.mainkatpen .addcateg {
+  float: right;
 }
 
-.addcateg{
-    margin-top: -5%;
-    padding: 1%;
-    margin-right: 2%;
-    background-color: #0e5e97;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.addcateg {
+  margin-top: -5%;
+  padding: 1%;
+  margin-right: 2%;
+  background-color: #0e5e97;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.tablekatpen a{
-    padding: 1%;
-    margin-right: 4%;
+.tablekatpen a {
+  padding: 1%;
+  margin-right: 4%;
 }
 
-.editcattab{
-    background-color: #0bac00;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.delcattab {
+  background-color: #ac0000;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 5px !important;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-.delcattab{
-    background-color: #ac0000;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-

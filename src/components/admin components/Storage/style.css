@@ -39,20 +39,6 @@
   bottom: 10%;
 }
 
-.jangSt thead,
-tbody {
-  border: 1px black;
-}
-.mainBoxStorage .jangSt {
-  width: 90%;
-  margin-left: 5%;
-}
-
-.jangSt thead tr th,
-.jangSt tbody tr td {
-  border: black 2%;
-}
-
-.mainBoxStorage form {
-  padding: 2%;
-}
+/* .addProducts {
+  margin-left: 50%;
+} */

@@ -105,13 +105,7 @@ function TabelStorage() {
       </div>
       <AddProductModal
         show={showAddProductModal}
-        handleClose={handleAddProductModalClose}
-        handleAddProduct={(newProduct) => {
-          const updatedProducts = [...products, newProduct];
-          localStorage.setItem("products", JSON.stringify(updatedProducts));
-          setProducts(updatedProducts);
-          alert("Product added successfully.");
-        }}
+        onHide={handleAddProductModalClose}
       />
 
       <EditProduct show={showEditModal} handleClose={handleCloseEditModal} />
