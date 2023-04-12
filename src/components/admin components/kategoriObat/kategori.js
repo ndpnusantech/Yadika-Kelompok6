@@ -52,8 +52,6 @@ const KatPenya = () => {
                   <button className="btn btn-md btn-danger">Delete</button>
                 </td>
               </tr>
-
-              {/* <a className=" editcattab"onClick={handleShowdit} >Edit</a> */}
             </tbody>
           </Table>
           <div className="modal">
