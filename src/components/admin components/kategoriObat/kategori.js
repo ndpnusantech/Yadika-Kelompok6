@@ -4,12 +4,16 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import EditModal from "./editModal";
 
-const KatPenya = () => {
+const KatObat = () => {
   const [show, setShow] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleShowEdit = () => setShowEdit(true);
+  const handleClosedit = () => setShowEdit(false);
 
   return (
     <>
@@ -32,7 +36,12 @@ const KatPenya = () => {
                 <td>1</td>
                 <td colSpan={2}>Cair</td>
                 <td>
-                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button
+                    className="btn btn-md btn-success me-3"
+                    onClick={handleShowEdit}
+                  >
+                    Edit
+                  </button>
                   <button className="btn btn-md btn-danger">Delete</button>
                 </td>
               </tr>
@@ -40,7 +49,12 @@ const KatPenya = () => {
                 <td>2</td>
                 <td colSpan={2}>Tablet</td>
                 <td>
-                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button
+                    className="btn btn-md btn-success me-3"
+                    onClick={handleShowEdit}
+                  >
+                    Edit
+                  </button>
                   <button className="btn btn-md btn-danger">Delete</button>
                 </td>
               </tr>
@@ -48,7 +62,12 @@ const KatPenya = () => {
                 <td>3</td>
                 <td colSpan={2}>Kapsul</td>
                 <td>
-                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button
+                    className="btn btn-md btn-success me-3"
+                    onClick={handleShowEdit}
+                  >
+                    Edit
+                  </button>
                   <button className="btn btn-md btn-danger">Delete</button>
                 </td>
               </tr>
@@ -81,6 +100,7 @@ const KatPenya = () => {
                 </Button>
               </Modal.Footer>
             </Modal>
+            <EditModal showedit={showEdit} Closedit={handleClosedit} />
           </div>
         </div>
       </div>
@@ -88,4 +108,4 @@ const KatPenya = () => {
   );
 };
 
-export default KatPenya;
+export default KatObat;
