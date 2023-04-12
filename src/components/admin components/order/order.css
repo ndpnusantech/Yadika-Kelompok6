@@ -1,26 +1,14 @@
-.tabelOrder {
+.BoxOrder {
+  background-color: #094067;
+  color: #fff;
+  width: 78%;
+  padding: 10px;
   margin-left: 20%;
-  text-align: center;
-  margin-right: 2rem;
-  border-radius: 10px;
+  margin-top: 2%;
+  border-radius: 15px;
 }
-.tabelOrder h1 {
-  text-align: left;
-}
-.tabelOrder button {
-  width: 120px;
-  height: 38px;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-}
-.tabelOrder .hijau {
-  background-color: green !important;
-  color: white !important;
-  font-weight: bold;
-  cursor: default;
-}
-.tabelOrder .merah {
-  background-color: rgb(227, 54, 54) !important;
-  color: white;
+
+/* Modal */
+.modal-content {
+  width: 100% !important;
 }

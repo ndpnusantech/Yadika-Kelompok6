@@ -1,4 +1,4 @@
-.mainkatpen {
+.mainkatbat {
   margin-left: 20%;
   margin-top: 2%;
   width: 78%;
@@ -8,13 +8,13 @@
   border-radius: 15px;
 }
 
-.mainkatpen h2 {
+.mainkatbat h2 {
   color: white;
   font-weight: bold;
   padding: 1%;
 }
 
-.mainkatpen .addcateg {
+.mainkatbat .addcateg {
   float: right;
 }
 
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-.tablekatpen a {
+.tablekatbat a {
   padding: 1%;
   margin-right: 4%;
 }

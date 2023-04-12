@@ -43,7 +43,7 @@ function TabelStorage() {
 
   return (
     <div className="mainBoxStorage">
-      <h1 className="mt-3 mb-3">Storage</h1>
+      <h2 className="mt-3 mb-2">Storage</h2>
       <div className="bg">
         <div className="addProduct me-3 mb-3 d-flex justify-content-end">
           <Button variant="primary" onClick={handleAddProductModalOpen}>

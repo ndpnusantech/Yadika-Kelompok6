@@ -36,17 +36,26 @@ const KatPenya = () => {
               <tr>
                 <td>1</td>
                 <td colSpan={2}>Masuk Angin</td>
-                <td><a className="delcattab"  >Delete</a>  </td>
+                <td>
+                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button className="btn btn-md btn-danger">Delete</button>
+                </td>
               </tr>
               <tr>
                 <td>2</td>
                 <td colSpan={2}>Sakit Gigi</td>
-                <td><a className="delcattab"  >Delete</a>  </td>
+                <td>
+                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button className="btn btn-md btn-danger">Delete</button>
+                </td>
               </tr>
               <tr>
                 <td>3</td>
                 <td colSpan={2}>Batuk & Pilek</td>
-                <td><a className="delcattab"  >Delete</a>  </td>
+                <td>
+                  <button className="btn btn-md btn-success me-3">Edit</button>
+                  <button className="btn btn-md btn-danger">Delete</button>
+                </td>
               </tr>
 
               {/* <a className=" editcattab"onClick={handleShowdit} >Edit</a> */}

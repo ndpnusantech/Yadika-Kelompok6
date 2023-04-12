@@ -46,7 +46,7 @@ const Sidebar = () => {
               <Dropdown.Item href="/adminobatkategori">
                 Kategori Penyakit
               </Dropdown.Item>
-              <Dropdown.Item href="#coming">Kategori Obat</Dropdown.Item>
+              <Dropdown.Item href="/kategoriObat">Kategori Obat</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

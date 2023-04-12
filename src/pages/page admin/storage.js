@@ -12,4 +12,4 @@ const StorageP = () => {
     )
 }
 
-export default StorageP
+export default StorageP;

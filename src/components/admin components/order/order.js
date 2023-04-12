@@ -1,92 +1,83 @@
-import Table from 'react-bootstrap/Table';
+import Table from "react-bootstrap/Table";
 import "./order.css";
+import OrderModal from "./orderModal";
+import { useState } from "react";
 
 const Order = () => {
+  const [show, setShow] = useState(false);
+  const [costumerName, setCostumerName] = useState("");
+
+  const handleShow = (costumers) => {
+    setCostumerName(costumers);
+    setShow(true);
+  };
+  const handleClose = () => setShow(false);
+
   return (
-    <div className='tabelOrder'>
-      <h1 className='mt-5 mb-5'> <b>Order</b></h1>
-      <Table striped bordered hover variant='dark'>
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Product</th>
-            <th>Qty</th>
-            <th>Payment Method</th>
-            <th>Id Pesanan</th>
-            <th>Total Harga</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td>
-              <button className="btn btn-md btn-primary me-2">Accept</button>
-              <button className="btn btn-md btn-danger">Reject</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td>
-              <button className="btn btn-md btn-primary me-2">Accept</button>
-              <button className="btn btn-md btn-danger">Reject</button>
-            </td>
-
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td>
-              <button className="btn btn-md btn-primary me-2">Accept</button>
-              <button className="btn btn-md btn-danger">Reject</button>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td><button className='hijau disabled'>Accepted</button></td>
-
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td><button className="merah disabled cur">Rejected</button></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Vicks Formula 44 Sirup 100ml</td>
-            <td>4</td>
-            <td>OVO</td>
-            <td>320483602710924</td>
-            <td>Rp. 76.400</td>
-            <td><button className='merah disabled cur'>Rejected</button></td>
-          </tr>
-        </tbody>
-      </Table>
+    <div className="BoxOrder">
+      <div className="title my-4 mx-3">
+        <h2>Order</h2>
+      </div>
+      <div className="tableOrder mx-3">
+        <Table striped bordered hover variant="dark" className="text-center">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Costumer Name</th>
+              <th>Id User</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Iqbal</td>
+              <td>ycl0708</td>
+              <td>
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={() => handleShow("Iqbal")}
+                >
+                  View Order
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Fahmi</td>
+              <td>tfm8762</td>
+              <td>
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={() => handleShow("Fahmi")}
+                >
+                  View Order
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Bagogo</td>
+              <td>khv9281</td>
+              <td>
+                <button
+                  className="btn btn-md btn-primary"
+                  onClick={() => handleShow("Bagogo")}
+                >
+                  View Order
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+      <OrderModal
+        show={show}
+        hide={handleClose}
+        title={costumerName + "'s" + " Orders"}
+      />
     </div>
   );
-}
+};
 
 export default Order;
