@@ -4,14 +4,14 @@ import { Form, Modal } from "react-bootstrap";
 const EditProduct = (props) => {
   const productId = props.productId;
   const products = JSON.parse(localStorage.getItem("products"));
-  const productData = products.find((product) => product.id === productId);
+  const productData = products && products.find((product) => product.id === productId);
   const [product, setProduct] = useState(productData || {});
 
   useEffect(() => {
     // load product data from localStorage when the modal is first shown
     const products = JSON.parse(localStorage.getItem("products"));
-    const productToUpdate = products.find((p) => p.id === props.productId);
-    setProduct(productToUpdate);
+    const productToUpdate = products && products.find((p) => p.id === props.productId);
+    setProduct(productToUpdate || {});
   }, [props.productId]);
 
   const handleSubmit = (event) => {

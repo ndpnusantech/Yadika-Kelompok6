@@ -88,7 +88,15 @@ const AddProductModal = (props) => {
                 <option value="Sakit Kepala">Resep Dokter</option>
               </select>
               <Form.Label className="me-2">Expired Product :</Form.Label>
-              <input type="date" name="expiredProduct" />
+              <input type="date" name="expiredProduct" /> <br />
+              <Form.Label>Jenis</Form.Label>
+              <Form.Control type="text" required className="mb-2" />
+              <Form.Label>Stock</Form.Label>
+              <Form.Control type="number" required className="mb-2" />
+              <Form.Label>Dosis</Form.Label>
+              <Form.Control type="text" required className="mb-2" />
+              <Form.Label>Golongan Product</Form.Label>
+              <Form.Control type="text" required className="mb-2" />
             </Col>
           </Row>
         </Form>
