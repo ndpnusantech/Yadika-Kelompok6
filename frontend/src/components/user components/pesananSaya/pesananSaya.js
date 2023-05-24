@@ -11,7 +11,6 @@ const PesananSaya = () => {
           <thead>
             <tr>
               <th>Id Pesanan</th>
-              <th>Product</th>
               <th>Jumlah</th>
               <th>Metode Pembayaran</th>
               <th>Total Harga</th>
@@ -21,7 +20,6 @@ const PesananSaya = () => {
           <tbody>
             <tr>
               <td>3788998978789921</td>
-              <td>Vicks Formula 44 Sirup 100ml</td>
               <td>4</td>
               <td>Dana</td>
               <td>Rp. 74.600</td>
@@ -29,7 +27,6 @@ const PesananSaya = () => {
             </tr>
             <tr>
               <td>0998289819892212</td>
-              <td>Oskadon Biru</td>
               <td>2</td>
               <td>Ovo</td>
               <td>Rp.8.000</td>
@@ -37,7 +34,6 @@ const PesananSaya = () => {
             </tr>
             <tr>
               <td>8989992300892545</td>
-              <td>Paramek</td>
               <td>1</td>
               <td>COD</td>
               <td>Rp1.000</td>
@@ -45,7 +41,6 @@ const PesananSaya = () => {
             </tr>
             <tr>
               <td>7878574890023028</td>
-              <td>Insa</td>
               <td>4</td>
               <td>Shopee Pay</td>
               <td>Rp.10.000</td>
