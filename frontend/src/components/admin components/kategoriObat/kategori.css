@@ -1,0 +1,34 @@
+.mainkatbat {
+  margin-left: 20%;
+  margin-top: 2%;
+  width: 78%;
+  padding: 10px;
+  background-color: #094067;
+  overflow-y: scroll;
+  border-radius: 15px;
+}
+
+.mainkatbat h2 {
+  color: white;
+  font-weight: bold;
+  padding: 1%;
+}
+
+.mainkatbat .addcateg {
+  float: right;
+}
+
+.addcateg {
+  margin-top: -5%;
+  padding: 1%;
+  margin-right: 2%;
+  background-color: #0e5e97;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tablekatbat a {
+  padding: 1%;
+  margin-right: 4%;
+}

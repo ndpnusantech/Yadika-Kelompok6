@@ -1,0 +1,14 @@
+.BoxOrder {
+  background-color: #094067;
+  color: #fff;
+  width: 78%;
+  padding: 10px;
+  margin-left: 20%;
+  margin-top: 2%;
+  border-radius: 15px;
+}
+
+/* Modal */
+.modal-content {
+  width: 100% !important;
+}

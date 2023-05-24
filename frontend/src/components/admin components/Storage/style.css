@@ -1,0 +1,45 @@
+.mainBoxStorage {
+  margin-left: 20%;
+  margin-top: 2%;
+  width: 78%;
+  padding: 20px;
+  background-color: #094067;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.mainBoxStorage .Table-storage table img {
+  width: 90px;
+}
+
+.bgT {
+  width: 100%;
+  background-color: #094067;
+  color: white;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.bgT h1 {
+  font-size: 150%;
+  padding: 2%;
+}
+
+.futah button {
+  float: right;
+  font-family: poppins;
+  font-weight: bold;
+}
+
+.futah {
+  position: fixed;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #094067;
+  width: 80%;
+  right: 5%;
+  padding: 1%;
+  bottom: 10%;
+}
+
+/* .addProducts {
+  margin-left: 50%;
+} */

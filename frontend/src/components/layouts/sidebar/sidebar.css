@@ -1,0 +1,42 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 18%;
+  height: 100vh;
+  background-color: #094067;
+}
+
+.sidebar .active-link {
+  margin-left: 15%;
+  border-radius: 20px 0 0 20px;
+  /* width */
+  background-color: rgb(255, 255, 255);
+  color: black !important;
+}
+
+.sidebar .profile {
+  background-color: #fff;
+}
+
+.sidebar .extramenu {
+  bottom: 30px;
+}
+
+.sidebar .accordion {
+  width: 200px;
+  padding: 0;
+}
+.sidebar .accordion .accordion-header {
+  display: flex;
+  justify-content: none;
+}
+.sidebar .accordion .accordion-item {
+  border: none !important;
+}
+.sidebar .accordion .accordion-body {
+  background-color: #094067;
+}
+.sidebar .accordion .accordion-button.collapsed {
+  background-color: #094067;
+  color: white;
+}

@@ -1,0 +1,9 @@
+.tabel {
+  margin-top: 100px;
+  margin-left: 20%;
+  margin-right: 2rem;
+  border-radius: 10% !important;
+}
+thead tbody {
+  margin-right: -50px;
+}
