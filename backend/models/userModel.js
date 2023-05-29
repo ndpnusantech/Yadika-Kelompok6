@@ -1,8 +1,6 @@
 import { DataTypes } from "sequelize";
 import db from "../config/database.js";
-import dotenv from 'dotenv';
 
-dotenv.config();
 
 const Users = db.define('users', {
     id_user: {
@@ -11,6 +9,7 @@ const Users = db.define('users', {
             return generateUUID(6);
         },
         allowNull: false,
+        primaryKey: true,
         validate: {
             notEmpty: true
         }

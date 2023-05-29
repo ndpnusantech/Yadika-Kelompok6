@@ -17,10 +17,10 @@ const sessionStore = SequelizeStore(session.Store)
 const store = new sessionStore({
     db: db
 })
-// const database = async () => {
-//     await db.sync();
-// }
-// database();
+const database = async () => {
+    await db.sync();
+}
+database();
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -41,7 +41,7 @@ app.use(userRoute);
 app.use(productRoute);
 app.use(authRoute)
 
-// store.sync()
+store.sync()
 
 app.listen(process.env.APP_PORT, () => {
     console.log('Server is running');
