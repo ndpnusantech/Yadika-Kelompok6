@@ -1,21 +1,18 @@
 import { Sequelize } from "sequelize";
 import db from "../config/database.js";
-import Categorys from "./categoryModel.js";
+
 
 const { DataTypes } = Sequelize;
 
 const Products = db.define('products', {
     id_product: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
+        unique: true,
         validate: {
-            notEmpty: true
-        },
-        set(value) {
-            const prefix = value.substring(0, 3).toLowerCase(); // Mengambil tiga huruf pertama dari nama produk dan mengonversikannya menjadi huruf kecil
-            const randomNum = Math.floor(Math.random() * 10000); // Menghasilkan angka acak antara 0 dan 9999
-            this.setDataValue('id_product', `${prefix}-${randomNum}`); // Menggabungkan prefix dengan angka acak dan mengatur nilainya
+            notEmpty: true,
         }
     },
     product_name: {
@@ -23,7 +20,6 @@ const Products = db.define('products', {
         allowNull: false,
         validate: {
             notEmpty: true,
-            len: [3, 100]
         }
     },
     product_image: {
@@ -31,7 +27,6 @@ const Products = db.define('products', {
         allowNull: false,
         validate: {
             notEmpty: true,
-            len: [3, 100]
         }
     },
     harga: {
@@ -42,7 +37,7 @@ const Products = db.define('products', {
             isNumeric: true
         }
     },
-    category: {
+    category_penyakit: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -50,7 +45,7 @@ const Products = db.define('products', {
             len: [3, 100]
         }
     },
-    jenis: {
+    categoryJenis_obat: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -130,8 +125,9 @@ const Products = db.define('products', {
         }
     },
 }, {
-    freezeTableName: true
+    freezeTableName: true,
 });
+
 
 
 

@@ -3,14 +3,14 @@ import db from "../config/database.js";
 
 const { DataTypes } = Sequelize;
 
-const Jeniss = db.define('jenis', {
+const Category_Obat = db.define('category_obat', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    nama_jenis: {
+    category_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -21,4 +21,4 @@ const Jeniss = db.define('jenis', {
     freezeTableName: true
 });
 
-export default Jeniss;
+export default Category_Obat;

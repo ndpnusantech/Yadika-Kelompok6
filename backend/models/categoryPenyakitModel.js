@@ -3,7 +3,7 @@ import db from "../config/database.js";
 
 const { DataTypes } = Sequelize;
 
-const Categorys = db.define('category', {
+const Category_Penyakit = db.define('category_penyakit', {
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -21,4 +21,4 @@ const Categorys = db.define('category', {
     freezeTableName: true
 });
 
-export default Categorys;
+export default Category_Penyakit;

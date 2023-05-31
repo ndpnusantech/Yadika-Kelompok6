@@ -1,6 +1,6 @@
-GET  http://localhost:5000/users
+GET  http://localhost:5000/products
 ###
-GET  http://localhost:5000/users/QD0TK2
+GET  http://localhost:5000/products/QD0TK2
 
 ###
 PATCH  http://localhost:5000/users/llmwhl
@@ -50,5 +50,49 @@ GET http://localhost:5000/islogin
 
 ### Logout
 DELETE  http://localhost:5000/logout
+
+
+###################################################################
+
+
+### Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "product_name": "Obat Asma",
+    "product_image": "Product Image URL",
+    "harga": 23000,
+    "category_penyakit": "Asma",
+    "categoryJenis_obat": "Obat Cair",
+    "stock_product": 99,
+    "deskripsi": "Product Description",
+    "komposisi": "Product Composition",
+    "dosis": "Product Dosage",
+    "aturan_pakai": "Product Usage Guidelines",
+    "kontra_indikasi": "Contraindications",
+    "efek_samping": "Side Effects",
+    "golongan_product": "Product Group",
+    "expired_product": "2005-11-07 07:11:20"
+}
+
+### Category Obat
+POST http://localhost:5000/categoryObat
+Content-Type: application/json 
+
+{
+    "category_name" : "Obat Cair"
+}
+
+### Category Penyakit
+POST http://localhost:5000/categoryPenyakit
+Content-Type: application/json 
+
+{
+    "category_name" : "Asma"
+}
+
+
+
 
 
