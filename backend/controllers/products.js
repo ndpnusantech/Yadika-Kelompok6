@@ -30,6 +30,7 @@ export const getProductById = async (req, res) => {
     }
 };
 
+//  Create
 export const createProduct = async (req, res) => {
     const {
         product_name,
