@@ -1,4 +1,18 @@
 GET  http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiMUZURHp2IiwidXNlcm5hbWUiOiJpcWJsZmRyc3loaGgiLCJlbWFpbCI6ImlxYmFsMTIzQGdtYWlsLmNvbSIsImlhdCI6MTY4NjcxNTk0MCwiZXhwIjoxNjg2NzE1OTYwfQ.Nd7kEHYvUSCVds7nI0Pl5WmJMCRgFgyOAdTzaCwHnxY
+
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{  
+    "email": "iqbal123@gmail.com",
+    "password": "iqbal123"  
+}
+
+###
+GET http://localhost:5000/token
+
 ###
 GET  http://localhost:5000/products/1FTDzv
 
@@ -33,16 +47,6 @@ Content-Type: application/json
     "password": "yuli123",
     "confirmPassword": "yuli123",
     "gender": "Female"
-}
-
-
-### LOGIN
-POST http://localhost:5000/login
-Content-Type: application/json
-
-{  
-    "email": "iqbal123@gmail.com",
-    "password": "iqbal123"  
 }
 
 ### Cek Login

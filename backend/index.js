@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import session from 'express-session';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser'
+import fileUpload from 'express-fileupload';
 import db from './config/database.js';
 import SequelizeStore from 'connect-session-sequelize'
 import userRoute from './routes/userRoute.js';
@@ -22,6 +24,13 @@ const store = new sessionStore({
 // }
 // database();
 
+try {
+    db.authenticate()
+    console.log("connected to db healtify");
+} catch (error) {
+    console.log(error);
+}
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -36,7 +45,10 @@ app.use(cors({
     credentials: true,
     origin: 'http://localhost:3000'
 }));
+app.use(cookieParser())
 app.use(express.json());
+app.use(fileUpload())
+app.use(express.static('public'))
 app.use(userRoute);
 app.use(productRoute);
 app.use(authRoute)
@@ -44,6 +56,5 @@ app.use(authRoute)
 // store.sync()
 
 app.listen(process.env.APP_PORT, () => {
-    console.log('Server is running');
     console.log(`Listening on port ${process.env.APP_PORT}`);
 });

@@ -1,6 +1,7 @@
 import User from "../models/userModel.js";
 import bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
+import Users from "../models/userModel.js";
 
 export const login = async (req, res) => {
     const user = await User.findOne({
@@ -33,7 +34,7 @@ export const login = async (req, res) => {
         httpOnly: true,
         maxAge: 360000
     });
-    res.json({ id_user, username, email, access_token: accessToken });
+    res.json({ access_token: accessToken });
 };
 
 
@@ -69,20 +70,22 @@ export const login = async (req, res) => {
 
 
 
-// export const logout = async (req, res) => {
-//     // Hapus token refresh dari sisi klien
-//     res.clearCookie('refresh_token');
+export const logout = async (req, res) => {
+    const refreshToken = req.cookies.refresh_token
+    if (!refreshToken) return res.sendStatus(204)
+    const user = await Users.findOne({
+        where: {
+            refresh_token: refreshToken
+        }
+    })
 
-//     const id_user = req.user.id_user;
-
-//     try {
-//         await User.update({ refresh_token: null }, {
-//             where: {
-//                 id_user: id_user
-//             }
-//         });
-//         res.status(200).json({ msg: "Anda Telah Logout" });
-//     } catch (error) {
-//         res.status(500).json({ msg: "Gagal melakukan logout" });
-//     }
-// };
+    if (!user) return res.sensStatus(204)
+    const userId = user.id_user
+    await Users.update({ refreshToken: null }, {
+        where: {
+            id: userId
+        }
+    })
+    res.clearCookie('refresh_token')
+    return res.sendStatus(200)
+};

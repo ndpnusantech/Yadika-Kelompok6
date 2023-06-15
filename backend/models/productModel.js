@@ -29,6 +29,13 @@ const Products = db.define('products', {
             notEmpty: true,
         }
     },
+    url_image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true
+        }
+    },
     harga: {
         type: DataTypes.DECIMAL,
         allowNull: false,
