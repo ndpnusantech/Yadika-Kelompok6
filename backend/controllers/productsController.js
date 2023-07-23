@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 const crypto = require('crypto')
-const { Product } = require('../helper/relation.js')
+const { Product, Category_penyakit, Category_jenisObat, GolonganObat } = require('../helper/relation.js')
 
 
 exports.getProducts = async (req, res) => {
@@ -46,7 +46,7 @@ exports.createProduct = async (req, res) => {
         aturan_pakai,
         kontra_indikasi,
         efek_samping,
-        golongan_product,
+        id_golObat,
         expired_product
     } = req.body;
 
@@ -75,36 +75,63 @@ exports.createProduct = async (req, res) => {
     const filename = `${timeStamp}-${randomString}${ext}`;
     const url = `${req.protocol}://${req.get('host')}/obat/${filename}`;
 
-    file.mv(`./public/obat/${filename}`, async (err) => {
-        if (err) {
-            return res.status(500).json({ msg: "Terjadi kesalahan saat mengunggah gambar" });
+    try {
+        const penyakitData = await Category_penyakit.findOne({ where: { id: parseInt(id_penyakit) } });
+        const jenisObatData = await Category_jenisObat.findOne({ where: { id: parseInt(id_jenisObat) } });
+        const golonganObatData = await GolonganObat.findOne({ where: { id: parseInt(id_golObat) } });
+        console.log({ ini: penyakitData.penyakit });
+        const categoryPenyakit = penyakitData.penyakit.toLowerCase();
+        const randomNumber = Math.floor(100 + Math.random() * 900); // Menghasilkan angka acak antara 100 dan 999
+        const threeDigitRandomNumber = randomNumber.toString().substring(0, 3); // Ambil 3 digit pertama dari angka acak
+        const productID = `${categoryPenyakit.substring(0, 1)}${categoryPenyakit.substring(1, 2)}${categoryPenyakit.substring(2, 3)}-${threeDigitRandomNumber}`;
+
+
+        if (!penyakitData) {
+            return res.status(404).json({ msg: "Data penyakit tidak ditemukan" });
+        }
+        if (!jenisObatData) {
+            return res.status(404).json({ msg: "Data jenis obat tidak ditemukan" });
+        }
+        if (!golonganObatData) {
+            return res.status(404).json({ msg: "Data golongan obat tidak ditemukan" });
         }
 
-        try {
+        const createdProduct = await Product.create({
+            id: productID,
+            product_name,
+            product_image: filename,
+            image_url: url,
+            price,
+            id_penyakit: penyakitData.penyakit,
+            id_jenisObat: jenisObatData.jenisObat,
+            stock,
+            deskripsi,
+            komposisi,
+            dosis,
+            aturan_pakai,
+            kontra_indikasi,
+            efek_samping,
+            id_golObat: golonganObatData.golonganObat,
+            expired_product
+        }, {
+            include: [
+                { model: Category_penyakit, as: 'Penyakit', association: 'category_penyakits' },
+                { model: Category_jenisObat, as: 'JenisObat', association: 'category_jenisObats' },
+                { model: GolonganObat, as: 'GolonganObat', association: 'golonganObats' }
+            ]
+        });
 
-            const createdProduct = await Product.create({
-                product_name,
-                product_image: filename,
-                image_url: url,
-                price,
-                id_penyakit,
-                id_jenisObat,
-                stock,
-                deskripsi,
-                komposisi,
-                dosis,
-                aturan_pakai,
-                kontra_indikasi,
-                efek_samping,
-                golongan_product,
-                expired_product
-            });
+        file.mv(`./public/obat/${filename}`, async (err) => {
+            if (err) {
+                await Product.destroy({ where: { id: createdProduct.id } }); // Menghapus produk yang telah dibuat
+                return res.status(500).json({ msg: "Terjadi kesalahan saat mengunggah gambar" });
+            }
 
             res.status(201).json({ msg: "Produk berhasil dibuat", product: createdProduct });
-        } catch (error) {
-            res.status(500).json({ msg: "Terjadi kesalahan saat membuat produk" });
-        }
-    });
+        });
+    } catch (error) {
+        res.status(500).json({ msg: error.message });
+    }
 };
 
 exports.editProduct = async (req, res) => {
@@ -122,7 +149,7 @@ exports.editProduct = async (req, res) => {
             aturan_pakai,
             kontra_indikasi,
             efek_samping,
-            golongan_product,
+            id_golObat,
             expired_product
         } = req.body;
 
@@ -182,7 +209,7 @@ exports.editProduct = async (req, res) => {
         product.aturan_pakai = aturan_pakai;
         product.kontra_indikasi = kontra_indikasi;
         product.efek_samping = efek_samping;
-        product.golongan_product = golongan_product;
+        product.id_golObat = id_golObat;
         product.expired_product = expired_product;
 
         await product.save();

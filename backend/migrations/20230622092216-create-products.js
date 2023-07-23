@@ -5,9 +5,9 @@ module.exports = {
     await queryInterface.createTable('Products', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        unique: true,
+        type: Sequelize.STRING
       },
       product_name: {
         type: Sequelize.STRING
@@ -48,7 +48,7 @@ module.exports = {
       efek_samping: {
         type: Sequelize.TEXT
       },
-      golongan_product: {
+      id_golObat: {
         type: Sequelize.STRING
       },
       expired_product: {
