@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Products.init({
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true,
+    },
     product_name: DataTypes.STRING,
     product_image: DataTypes.STRING,
     image_url: DataTypes.STRING,
@@ -27,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     aturan_pakai: DataTypes.STRING,
     kontra_indikasi: DataTypes.STRING,
     efek_samping: DataTypes.TEXT,
-    golongan_product: DataTypes.STRING,
+    id_golObat: DataTypes.STRING,
     expired_product: DataTypes.DATE
   }, {
     sequelize,
