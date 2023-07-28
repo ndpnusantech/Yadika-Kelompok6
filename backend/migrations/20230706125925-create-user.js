@@ -6,6 +6,7 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
+        unique: true,
         type: Sequelize.STRING
       },
       fullname: {
@@ -15,7 +16,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       username: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       password: {
         type: Sequelize.TEXT
@@ -27,7 +29,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       createdAt: {
         allowNull: false,
