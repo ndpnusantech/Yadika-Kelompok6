@@ -32,7 +32,7 @@ Category_jenisObat.hasMany(Product, {
 // Relasi antara Product dan GolonganObat
 Product.belongsTo(GolonganObat, {
     foreignKey: 'id_golObat',
-    as: 'golonganObats' 
+    as: 'golonganObats'
 });
 
 GolonganObat.hasMany(Product, {
@@ -43,12 +43,17 @@ GolonganObat.hasMany(Product, {
 // Relasi antara keranjang, user dan product
 Keranjang.belongsTo(Product, {
     foreignKey: "id_product",
-    as: "keranjang"
+    as: "products"
 })
 
-// Keranjang.belongsTo(Users, {
-//     foreignKey: "id_user",
-//     as: "keranjang"
-// })
+Keranjang.belongsTo(Users, {
+    foreignKey: "id_user",
+    as: "users"
+})
+
+Product.hasMany(Keranjang, {
+    foreignKey: 'id_product',
+    as: 'keranjangs'
+});
 
 module.exports = { Users, Product, Category_penyakit, Category_jenisObat, GolonganObat, Keranjang };

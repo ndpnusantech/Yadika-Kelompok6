@@ -75,27 +75,26 @@ exports.createProduct = async (req, res) => {
     const filename = `${timeStamp}-${randomString}${ext}`;
     const url = `${req.protocol}://${req.get('host')}/obat/${filename}`;
 
+    const penyakitData = await Category_penyakit.findOne({ where: { id: parseInt(id_penyakit) } });
+    const jenisObatData = await Category_jenisObat.findOne({ where: { id: parseInt(id_jenisObat) } });
+    const golonganObatData = await GolonganObat.findOne({ where: { id: parseInt(id_golObat) } });
+    console.log({ ini: penyakitData.penyakit });
+    const categoryPenyakit = penyakitData.penyakit.toLowerCase();
+    const randomNumber = Math.floor(100 + Math.random() * 900); // Menghasilkan angka acak antara 100 dan 999
+    const threeDigitRandomNumber = randomNumber.toString().substring(0, 3); // Ambil 3 digit pertama dari angka acak
+    const productID = `${categoryPenyakit.substring(0, 1)}${categoryPenyakit.substring(1, 2)}${categoryPenyakit.substring(2, 3)}-${threeDigitRandomNumber}`;
+
+
+    if (!penyakitData) {
+        return res.status(404).json({ msg: "Data penyakit tidak ditemukan" });
+    }
+    if (!jenisObatData) {
+        return res.status(404).json({ msg: "Data jenis obat tidak ditemukan" });
+    }
+    if (!golonganObatData) {
+        return res.status(404).json({ msg: "Data golongan obat tidak ditemukan" });
+    }
     try {
-        const penyakitData = await Category_penyakit.findOne({ where: { id: parseInt(id_penyakit) } });
-        const jenisObatData = await Category_jenisObat.findOne({ where: { id: parseInt(id_jenisObat) } });
-        const golonganObatData = await GolonganObat.findOne({ where: { id: parseInt(id_golObat) } });
-        console.log({ ini: penyakitData.penyakit });
-        const categoryPenyakit = penyakitData.penyakit.toLowerCase();
-        const randomNumber = Math.floor(100 + Math.random() * 900); // Menghasilkan angka acak antara 100 dan 999
-        const threeDigitRandomNumber = randomNumber.toString().substring(0, 3); // Ambil 3 digit pertama dari angka acak
-        const productID = `${categoryPenyakit.substring(0, 1)}${categoryPenyakit.substring(1, 2)}${categoryPenyakit.substring(2, 3)}-${threeDigitRandomNumber}`;
-
-
-        if (!penyakitData) {
-            return res.status(404).json({ msg: "Data penyakit tidak ditemukan" });
-        }
-        if (!jenisObatData) {
-            return res.status(404).json({ msg: "Data jenis obat tidak ditemukan" });
-        }
-        if (!golonganObatData) {
-            return res.status(404).json({ msg: "Data golongan obat tidak ditemukan" });
-        }
-
         const createdProduct = await Product.create({
             id: productID,
             product_name,
@@ -113,12 +112,6 @@ exports.createProduct = async (req, res) => {
             efek_samping,
             id_golObat: golonganObatData.golonganObat,
             expired_product
-        }, {
-            include: [
-                { model: Category_penyakit, as: 'Penyakit', association: 'category_penyakits' },
-                { model: Category_jenisObat, as: 'JenisObat', association: 'category_jenisObats' },
-                { model: GolonganObat, as: 'GolonganObat', association: 'golonganObats' }
-            ]
         });
 
         file.mv(`./public/obat/${filename}`, async (err) => {
